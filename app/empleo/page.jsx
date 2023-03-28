@@ -22,7 +22,7 @@ export default function EmpleoPage() {
     })
     if (process.browser) {
       const storage = JSON.parse(localStorage.getItem("form"))
-      storage.cv.results[e.target.name] = e.target.value
+      storage.linkedin.results[e.target.name] = e.target.value
       localStorage.setItem("form", JSON.stringify(storage))
     }
   }
@@ -101,7 +101,7 @@ export default function EmpleoPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
+                ¿Tienes perfil de Linkedin? 
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -113,7 +113,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "si" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -132,7 +132,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "no" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -141,7 +141,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
+                      Hay ciertos perfiles profesionales (operativos o algunos técnicos) para los que no es necesario tener un perfil de Linkedin pero si  el tuyo sí lo es y no  lo tienes, considera abrir uno. 
                       </p>}
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function EmpleoPage() {
               <fieldset>
 
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
+                 ¿Tu perfil de Linkedin está actualizado? 
                 </legend>
 
                 <div className="mt-6 space-y-6">
@@ -167,7 +167,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "si" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -186,7 +186,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "no" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -195,7 +195,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
+                      No solamente necesitas tener un perfil que te venda y esté actualizado (con tu foto e información). Normalmente, después de haber  trabajado con tu C.V. ya es más  fácil que utilices tu perfil y tus logros bien redactados para mejorar tu Linkedin.
                       </p>}
 
                     </div>
@@ -209,7 +209,7 @@ export default function EmpleoPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. contiene tus mejores logros y fortalezas? *
+                ¿Eres miembro activo en Linkedin? Lo revisas y/o publicas al menos 3 veces por semana.
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -221,7 +221,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "si" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -240,7 +240,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "no" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -249,7 +249,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
+                      Si no revisas tu perfil, no publicas, no contactas con nadie, de nada sirve que lo tengas actualizado. Es como tener una herramienta guardada y no ocuparla.
                       </p>}
 
                     </div>
@@ -263,7 +263,7 @@ export default function EmpleoPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
+                ¿Eres visible en Linkedin? Es decir, ¿te piden contactar contigo y has incrementado tu lista de contactos?
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -275,7 +275,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "si" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -294,7 +294,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "no" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -303,7 +303,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
+                      Si no contactas de manera deliberada con personas que te ayuden a conseguir el empleo que quieres y no estás incrementando tu red, entonces no estás ocupando tu perfil de manera adecuada para cumplir  tu objetivo, debes tener una actitud más activa frente a tu búsqueda de empleo.
                       </p>}
 
                     </div>
@@ -317,7 +317,7 @@ export default function EmpleoPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
+                 ¿Sabes usar Linkedin para buscar empleo? 
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -329,7 +329,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "si" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -348,7 +348,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "no" ? true : ""}
+                        defaultChecked={storage?.linkedin.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -357,7 +357,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
+                      Si no sabes qué debes hacer para estar más visible  para  los reclutadores y/ o lo sabes pero no lo estás  haciendo,  ahí tienes una gran área de oportunidad.
                       </p>}
                     </div>
                   </div>
