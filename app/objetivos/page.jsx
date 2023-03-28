@@ -22,7 +22,7 @@ export default function ObjetivosPage() {
     })
     if (process.browser) {
       const storage = JSON.parse(localStorage.getItem("form"))
-      storage.cv.results[e.target.name] = e.target.value
+      storage.objetivos.results[e.target.name] = e.target.value
       localStorage.setItem("form", JSON.stringify(storage))
     }
   }
@@ -101,7 +101,7 @@ export default function ObjetivosPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
+                  ¿Sientes que mantienes un equilibrio en tu vida? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -113,7 +113,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "si" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -132,7 +132,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "no" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -141,7 +141,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
+                        Si no tienes un equilibrio en tu vida, le estás dedicando demasiado tiempo a tu trabajo y no tienes tiempo para tu salud, estar contigo mismo (a), tu familia, tus amigos, tus actividades recreativas, etc. Puede ser  momento para darte una pausa, reflexionar sobre lo que estás haciendo y lo que quieres hacer.
                       </p>}
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function ObjetivosPage() {
               <fieldset>
 
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
+                  ¿Tienes claro el camino para tu crecimiento profesional? *
                 </legend>
 
                 <div className="mt-6 space-y-6">
@@ -167,7 +167,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "si" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -186,7 +186,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "no" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -195,7 +195,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
+                        Si no sabes hacia dónde vas, entonces ¿cómo sabrás si ya llegaste o cuánto te falta? Es importante que definas  tu crecimiento profesional o laboral tan lejos como lo quieras llevar. Esta es una pregunta de entrevista ¿cómo te ves en cinco, 10 o 15 años? Deberías tener por lo menos una idea de qué contestar.
                       </p>}
 
                     </div>
@@ -209,7 +209,7 @@ export default function ObjetivosPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. contiene tus mejores logros y fortalezas? *
+                  ¿Llevas a cabo tu vocación? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -221,7 +221,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "si" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -240,7 +240,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "no" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -249,7 +249,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
+                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional. 
                       </p>}
 
                     </div>
@@ -263,7 +263,7 @@ export default function ObjetivosPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
+                  ¿Tienes objetivos claros para tus esferas de: Salud, Familia y  Vida Social? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -275,7 +275,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "si" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -294,7 +294,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "no" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -303,7 +303,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
+                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.  
                       </p>}
 
                     </div>
@@ -317,7 +317,7 @@ export default function ObjetivosPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
+                  ¿Tienes un objetivo claro de Trabajo? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -329,7 +329,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "si" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -348,7 +348,7 @@ export default function ObjetivosPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "no" ? true : ""}
+                        defaultChecked={storage?.objetivos.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -357,7 +357,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
+                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc. 
                       </p>}
                     </div>
                   </div>
