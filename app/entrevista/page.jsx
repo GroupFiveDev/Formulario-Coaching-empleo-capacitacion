@@ -22,7 +22,7 @@ export default function EntrevistaPage() {
     })
     if (process.browser) {
       const storage = JSON.parse(localStorage.getItem("form"))
-      storage.cv.results[e.target.name] = e.target.value
+      storage.entrevista.results[e.target.name] = e.target.value
       localStorage.setItem("form", JSON.stringify(storage))
     }
   }
@@ -101,7 +101,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
+                  ¿Sabes qué debes hacer antes, durante y después de una entrevista laboral? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -113,7 +113,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "si" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -132,7 +132,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "no" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -141,7 +141,7 @@ export default function EntrevistaPage() {
                         No
                       </label>
                       {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
+                        Si no sabes qué hacer en alguno de estos tiempos,  en el coaching  de Preparación de entrevista laboral te explico 45 actividades  específicas que debes de llevar a cabo antes, durante y después;  tal vez, no estés llevando a cabo varias de ellas.
                       </p>}
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function EntrevistaPage() {
               <fieldset>
 
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
+                  ¿Logras mantenerte en el proceso de selección después de una entrevista? *
                 </legend>
 
                 <div className="mt-6 space-y-6">
@@ -167,7 +167,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "si" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -186,7 +186,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "no" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -195,7 +195,7 @@ export default function EntrevistaPage() {
                         No
                       </label>
                       {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
+                        Es posible que estés teniendo errores en tus lenguajes, contestaste de manera inadecuada,   te  faltó venderte como el /la  mejor candidato (a) posible o alguna otra razón que no te estás percatando. Podemos saberlo a través de una simulación de entrevista.
                       </p>}
 
                     </div>
@@ -209,7 +209,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. contiene tus mejores logros y fortalezas? *
+                  ¿Sientes confianza al contestar las preguntas del reclutador? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -221,7 +221,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "si" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -240,7 +240,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "no" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -249,7 +249,7 @@ export default function EntrevistaPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
+                        Si no tienes confianza, en el coaching de preparación te compartiré  un archivo con las  50 preguntas más comunes de una entrevista laboral para que las contestes todas, elijas las 10 más complicadas para ti y  trabajaremos con ellas en una parte de la sesión.  Además, te enseñaré a contestar de manera adecuada a cualquier pregunta que te hagan.
                       </p>}
 
                     </div>
@@ -263,7 +263,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
+                  ¿Realizas el seguimiento correspondiente después de la entrevista? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -275,7 +275,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "si" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -294,7 +294,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "no" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -303,7 +303,7 @@ export default function EntrevistaPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
+                        Es importante que después de la entrevista le des seguimiento constante a los procesos en los que estés participando (de manera activa - proactiva) y no te esperes a que te llamen para darte alguna respuesta (eso es reactivo- pasivo).
                       </p>}
 
                     </div>
@@ -317,7 +317,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
+                  ¿Eres consciente de tus lenguajes verbal, paraverbal y corporal, durante la entrevista? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -329,7 +329,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="si"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "si" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -348,7 +348,7 @@ export default function EntrevistaPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "no" ? true : ""}
+                        defaultChecked={storage?.entrevista.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -357,7 +357,7 @@ export default function EntrevistaPage() {
                         No
                       </label>
                       {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
+                        En la entrevista laboral, no solamente es importante contestar de manera adecuada (lo que dices) sino cómo lo dices (calidad y cualidad de tu voz), los gestos que  haces con tu cara y la postura de tu cuerpo.  Es posible que si no los estás usando de manera consciente entonces estén jugando en tu contra.
                       </p>}
                     </div>
                   </div>
@@ -373,3 +373,9 @@ export default function EntrevistaPage() {
   )
 }
 
+//Para  la gráfica:
+//•	Cada pregunta  vale  20 puntos  si contesta “SÍ”, dando un total de 100 puntos (100%).
+//•	Si contesta   NO en la pregunta 6  recomendarle el :Coaching de Preparación de Entrevista Laboral.
+//•	Sí  contesta de 20  a 60  (3 preguntas) incluir en la propuesta el: Coaching de Preparación de Entrevista Laboral.
+//•	Si contesta 80 (4 preguntas) incluir en la propuesta: Coaching de Simulación de entrevista laboral.
+//•	Si contesta 100 %  Sí (5 preguntas)  poner: ¡Felicidades, este es un tema que ya tienes dominado!

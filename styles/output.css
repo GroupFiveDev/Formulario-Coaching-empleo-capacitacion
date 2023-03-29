@@ -691,6 +691,10 @@ select {
   border-width: 0;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .relative {
   position: relative;
 }
