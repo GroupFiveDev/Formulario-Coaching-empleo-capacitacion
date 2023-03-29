@@ -112,49 +112,49 @@ export default function HomePage() {
           {/* correo */}
           <div>
             <label htmlFor="correo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección de correo electrónico *</label>
-            <input onChange={handleChange} type="text" id="correo" name="correo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.correo} />
+            <input onChange={handleChange} type="email" id="correo" placeholder='ejemplo@ejemplo.com' name="correo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.correo} required/>
           </div>
 
           {/* Nombre completo */}
           <div>
             <label htmlFor="nombre_completo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre completo *</label>
-            <input onChange={handleChange} type="text" id="nombre_completo" name="nombre_completo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.nombre_completo} />
+            <input onChange={handleChange} type="text" id="nombre_completo" placeholder='Nombre Completo' name="nombre_completo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.nombre_completo} required/>
           </div>
 
           {/* numero_telefonico */}
           <div>
             <label htmlFor="numero_telefonico" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número telefónico (con lada), especificando ciudad y país. *</label>
-            <input onChange={handleChange} type="tel" id="numero_telefonico" name="numero_telefonico" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" defaultValue={storage?.datos_personales.numero_telefonico} />
+            <input onChange={handleChange} type="tel" id="numero_telefonico" name="numero_telefonico" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" defaultValue={storage?.datos_personales.numero_telefonico} required/>
           </div>
 
           {/* fecha_de_nacimiento */}
           <div>
             <label htmlFor="fecha_de_nacimiento" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha *</label>
-            <input onChange={handleChange} type="text" id="fecha_de_nacimiento" name="fecha_de_nacimiento" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="dia/mes/año" defaultValue={storage?.datos_personales.fecha_de_nacimiento} />
+            <input onChange={handleChange} type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="dia/mes/año" defaultValue={storage?.datos_personales.fecha_de_nacimiento} required/>
           </div>
 
           {/* edad */}
           <div>
             <label htmlFor="edad" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad *</label>
-            <input onChange={handleChange} type="text" id="edad" name="edad" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.edad} />
+            <input onChange={handleChange} type="number" id="edad" placeholder='Edad' name="edad" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.edad} required/>
           </div>
 
           {/* ¿Qué puesto o empleo buscas? * */}
           <div>
             <label htmlFor="Qué_puesto_o_empleo_buscas" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Qué puesto o empleo buscas? *</label>
-            <input onChange={handleChange} type="text" id="Qué_puesto_o_empleo_buscas" name="Qué_puesto_o_empleo_buscas" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" defaultValue={storage?.datos_personales.Qué_puesto_o_empleo_buscas} />
+            <input onChange={handleChange} type="text" id="Qué_puesto_o_empleo_buscas" name="Qué_puesto_o_empleo_buscas" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" defaultValue={storage?.datos_personales.Qué_puesto_o_empleo_buscas} required/>
           </div>
 
           {/* ¿En qué tipo área o departamentos te interesa trabajar?  */}
           <div>
             <label htmlFor="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿En qué tipo área o departamentos te interesa trabajar?  *</label>
-            <input onChange={handleChange} type="text" id="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" name="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.En_qué_tipo_área_o_departamentos_te_interesa_trabajar} />
+            <input onChange={handleChange} type="text" id="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" name="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.En_qué_tipo_área_o_departamentos_te_interesa_trabajar} required/>
           </div>
 
           {/* ¿En qué tipo área o departamentos te interesa trabajar?  */}
           <div>
             <label htmlFor="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿En qué tipo de  empresa te ves desarrollándote profesionalmente? *</label>
-            <input onChange={handleChange} type="text" id="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" name="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente} />
+            <input onChange={handleChange} type="text" id="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" name="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente} required/>
           </div>
 
           {/* Cómo_te_sientes_en_esta_búsqueda_de_empleo */}
@@ -188,7 +188,7 @@ export default function HomePage() {
             {/* Otro */}
             <div>
               <label htmlFor="otro" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Otro</label>
-              <input onChange={handleChange} name="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="text" id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+              <input onChange={handleChange} name="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="text" id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" placeholder='especificar...' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
           </div>
 
@@ -242,7 +242,7 @@ export default function HomePage() {
             {/* Otro */}
             <div>
               <label htmlFor="otro" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Otro</label>
-              <input onChange={handleChange} type="text" name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+              <input onChange={handleChange} type="text" name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" placeholder='especificar...' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
         {/* Cuánto tiempo llevas desempleado */}
         <div className="mb-6">
           <label htmlFor="Cuánto_tiempo_llevas_desempleado" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Cuánto tiempo llevas desempleado (a)? *</label>
-          <input onChange={handleChange} type="text" id="Cuánto_tiempo_llevas_desempleado" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.Cuánto_tiempo_llevas_desempleado} />
+          <input onChange={handleChange} type="text" id="Cuánto_tiempo_llevas_desempleado" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.Cuánto_tiempo_llevas_desempleado} required/>
         </div>
 
         <Link href={"/cv"}>
