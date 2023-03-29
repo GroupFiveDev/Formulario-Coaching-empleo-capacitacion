@@ -132,7 +132,7 @@ export default function EmpleoPage() {
                         type="radio"
                         value="no"
                         onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "no" ? true : ""}
+                        defaultChecked={storage?.empleo.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                       />
                     </div>
@@ -249,7 +249,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
+                        La mejor fuente de  búsqueda de empleo es tu red de contactos pero si no la estás  usando o lo estás haciendo de manera ineficiente, no te dará  los resultados correctos.
                       </p>}
 
                     </div>
@@ -303,7 +303,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
+                        La mayoría de las personas que buscan empleo únicamente consideran darse de alta en bolsas de trabajo y postularse a vacantes con un C.V. general,  sin poderle dar seguimiento y no se enfocan en otras fuentes más efectivas.
                       </p>}
 
                     </div>
@@ -337,7 +337,6 @@ export default function EmpleoPage() {
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
                         Si
                       </label>
-
                     </div>
                   </div>
                   <div className="relative flex gap-x-3">
@@ -363,9 +362,7 @@ export default function EmpleoPage() {
                   </div>
                 </div>
               </fieldset>
-
             </div>
-
           </div>
         </div>
       </div>
