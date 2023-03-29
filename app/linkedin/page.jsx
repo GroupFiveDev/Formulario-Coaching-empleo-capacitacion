@@ -101,7 +101,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Tienes perfil de Linkedin? 
+                ¿Tienes perfil de Linkedin? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -156,7 +156,7 @@ export default function LinkedinPage() {
               <fieldset>
 
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Tu perfil de Linkedin está actualizado? 
+                ¿Tu perfil de Linkedin está actualizado? *
                 </legend>
 
                 <div className="mt-6 space-y-6">
@@ -210,7 +210,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Eres miembro activo en Linkedin? Lo revisas y/o publicas al menos 3 veces  por semana.  
+                ¿Eres miembro activo en Linkedin? Lo revisas y/o publicas al menos 3 veces por semana. * 
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -265,7 +265,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Eres visible en Linkedin? Es decir, ¿te piden contactar contigo y has incrementado tu lista de contactos? 
+                ¿Eres visible en Linkedin? Es decir, ¿te piden contactar contigo y has incrementado tu lista de contactos? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -320,7 +320,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Sabes usar Linkedin para buscar empleo?
+                ¿Sabes usar Linkedin para buscar empleo? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
