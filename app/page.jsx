@@ -1,34 +1,80 @@
 'use client'
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
+  const router = useRouter()
+  // const [storage, setStorage] = useState(JSON.parse(localStorage.getItem("form")))
+  // const [storage, setStorage] = useState()
   let storage
-  if (process.browser) {
+
+
+  if (typeof window !== 'undefined') {
     storage = JSON.parse(localStorage.getItem("form"))
   }
 
+
   const [results, setResults] = useState({
-    Pregunta1: "",
-    Pregunta2: "",
-    Pregunta3: "",
-    Pregunta4: "",
-    Pregunta5: "",
+    correo: "",
+    nombre_completo: "",
+    numero_telefonico: "",
+    fecha_de_nacimiento: "",
+    edad: "",
+    Qué_puesto_o_empleo_buscas: "",
+    En_qué_tipo_área_o_departamentos_te_interesa_trabajar: "",
+    En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente: "",
+    Cómo_te_sientes_en_esta_búsqueda_de_empleo: storage?.datos_personales.Cómo_te_sientes_en_esta_búsqueda_de_empleo.length ? storage.datos_personales.Cómo_te_sientes_en_esta_búsqueda_de_empleo : [],
+    Qué_buscas_en_un_empleo: storage?.datos_personales.Qué_buscas_en_un_empleo.length ? storage.datos_personales.Qué_buscas_en_un_empleo : [],
+    Cuánto_tiempo_llevas_desempleado: ""
   })
 
   function handleChange(e) {
     setResults({
       ...results,
-      [e.target.name]: e.target.value
+      [e.target.id]: e.target.value
     })
     if (process.browser) {
       const storage = JSON.parse(localStorage.getItem("form"))
-      storage.cv.results[e.target.name] = e.target.value
+      storage.datos_personales[e.target.id] = e.target.value
       localStorage.setItem("form", JSON.stringify(storage))
     }
   }
 
+  function handleChangeChecbox(e) {
+    const value = e.target.value
+    if (storage.datos_personales[e.target.id].includes(value)) {
+      // const index = results[e.target.id].findIndex(e => e === value)
+      // results[e.target.id].splice(index, 1)
+
+      const index2 = storage.datos_personales[e.target.id].findIndex(e => e === value)
+      storage.datos_personales[e.target.id].splice(index2, 1)
+    } else {
+      results[e.target.id].push(value)
+      storage?.datos_personales[e.target.id].push(value)
+    }
+    localStorage.setItem("form", JSON.stringify(storage))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/cv");
+  }
+
   useEffect(() => {
     const obj = {
+      datos_personales: {
+        correo: "",
+        nombre_completo: "",
+        numero_telefonico: "",
+        fecha_de_nacimiento: "",
+        edad: "",
+        Qué_puesto_o_empleo_buscas: "",
+        En_qué_tipo_área_o_departamentos_te_interesa_trabajar: "",
+        En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente: "",
+        Cómo_te_sientes_en_esta_búsqueda_de_empleo: [],
+        Qué_buscas_en_un_empleo: [],
+        Cuánto_tiempo_llevas_desempleado: ""
+      },
       cv: {
         results: {
           Pregunta1: "",
@@ -75,301 +121,166 @@ export default function HomePage() {
         }
       }
     }
-    if (process.browser) {
-      if (!storage)
-        localStorage.setItem("form", JSON.stringify(obj))
-    }
-  }, [])
-
+    // if (process.browser) {
+    if (!storage)
+      localStorage.setItem("form", JSON.stringify(obj))
+    // }
+  })
 
   return (
-    <form>
-      <div className="space-y-12">
-        <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Entrevista laboral</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-            This information will be displayed publicly so be careful what you share.
-          </p>
+    <>
 
-          <div className="border-b border-gray-900/10 pb-12">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-              We'll always let you know about important changes, but you pick what else you want to hear about.
-            </p>
+      <h1 className="text-5xl font-extrabold dark:text-white"> Diagnóstico inicial de búsqueda de empleo.<br /><small className="ml-2 font-semibold text-gray-500 dark:text-gray-400">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</small></h1>
+      <form onSubmit={handleSubmit}>
+        <div className="grid gap-6 mb-6 md:grid-cols-2">
 
-            {/* pregunta 1 */}
-            <div className="mt-10 space-y-10">
-              <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
-                </legend>
-                <div className="mt-6 space-y-6">
+          {/* correo */}
+          <div>
+            <label htmlFor="correo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección de correo electrónico *</label>
+            <input onChange={handleChange} type="text" id="correo" name="correo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.correo} required />
+          </div>
 
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta1A"
-                        name="Pregunta1"
-                        type="radio"
-                        value="si"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "si" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="pregunta1a" className="font-medium text-gray-900">
-                        Si
-                      </label>
+          {/* Nombre completo */}
+          <div>
+            <label htmlFor="nombre_completo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre completo *</label>
+            <input onChange={handleChange} type="text" id="nombre_completo" placeholder='Nombre Completo' name="nombre_completo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.nombre_completo} required />
+          </div>
 
-                    </div>
-                  </div>
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="pregunta1B"
-                        name="Pregunta1"
-                        type="radio"
-                        value="no"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta1 === "no" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="pregunta1b" className="font-medium text-gray-900">
-                        No
-                      </label>
-                      {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
-                      </p>}
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
+          {/* numero_telefonico */}
+          <div>
+            <label htmlFor="numero_telefonico" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número telefónico (con lada), especificando ciudad y país. *</label>
+            <input onChange={handleChange} type="number" id="numero_telefonico" name="numero_telefonico" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" defaultValue={storage?.datos_personales.numero_telefonico} required />
+          </div>
 
+          {/* fecha_de_nacimiento */}
+          <div>
+            <label htmlFor="fecha_de_nacimiento" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha *</label>
+            <input onChange={handleChange} type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="dia/mes/año" defaultValue={storage?.datos_personales.fecha_de_nacimiento} required />
+          </div>
+
+          {/* edad */}
+          <div>
+            <label htmlFor="edad" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad *</label>
+            <input onChange={handleChange} type="number" id="edad" placeholder='Edad' name="edad" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.edad} required />
+          </div>
+
+          {/* ¿Qué puesto o empleo buscas? * */}
+          <div>
+            <label htmlFor="Qué_puesto_o_empleo_buscas" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Qué puesto o empleo buscas? *</label>
+            <input onChange={handleChange} type="text" id="Qué_puesto_o_empleo_buscas" name="Qué_puesto_o_empleo_buscas" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" defaultValue={storage?.datos_personales.Qué_puesto_o_empleo_buscas} required />
+          </div>
+
+          {/* ¿En qué tipo área o departamentos te interesa trabajar?  */}
+          <div>
+            <label htmlFor="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿En qué tipo área o departamentos te interesa trabajar?  *</label>
+            <input onChange={handleChange} type="text" id="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" name="En_qué_tipo_área_o_departamentos_te_interesa_trabajar" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.En_qué_tipo_área_o_departamentos_te_interesa_trabajar} required />
+          </div>
+
+          {/* ¿En qué tipo área o departamentos te interesa trabajar?  */}
+          <div>
+            <label htmlFor="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿En qué tipo de  empresa te ves desarrollándote profesionalmente? *</label>
+            <input onChange={handleChange} type="text" id="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" name="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente} required />
+          </div>
+
+          {/* Cómo_te_sientes_en_esta_búsqueda_de_empleo */}
+          <div>
+            <label htmlFor="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Cómo te sientes en esta búsqueda de empleo?  Puedes elegir varias opciones. *</label>
+
+            {/* Motivado */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="checkbox" value="Motivado" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" defaultChecked={results.Cómo_te_sientes_en_esta_búsqueda_de_empleo.includes("Motivado") ? true : false} />
+              <label htmlFor="Motivado" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Motivado (a).</label>
             </div>
 
-            {/* pregunta 2 */}
-            <div className="mt-10 space-y-10">
-              <fieldset>
-
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
-                </legend>
-
-                <div className="mt-6 space-y-6">
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta2A"
-                        name="Pregunta2"
-                        type="radio"
-                        value="si"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "si" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        Si
-                      </label>
-
-                    </div>
-                  </div>
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta2A"
-                        name="Pregunta2"
-                        type="radio"
-                        value="no"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta2 === "no" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        No
-                      </label>
-                      {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
-                      </p>}
-
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-
+            {/* Enojado */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Cómo_te_sientes_en_esta_búsqueda_de_empleo.includes("Enojado") ? true : false} id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="checkbox" value="Enojado" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Enojado" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Enojado (a).</label>
             </div>
 
-            {/* pregunta 3 */}
-            <div className="mt-10 space-y-10">
-              <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Tu C.V. contiene tus mejores logros y fortalezas? *
-                </legend>
-                <div className="mt-6 space-y-6">
-
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta3A"
-                        name="Pregunta3"
-                        type="radio"
-                        value="si"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "si" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        Si
-                      </label>
-
-                    </div>
-                  </div>
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta3B"
-                        name="Pregunta3"
-                        type="radio"
-                        value="no"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta3 === "no" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        No
-                      </label>
-                      {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
-                      </p>}
-
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-
+            {/* Desesperado */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Cómo_te_sientes_en_esta_búsqueda_de_empleo.includes("Desesperado") ? true : false} id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="checkbox" value="Desesperado" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Desesperado" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Desesperado (a)</label>
             </div>
 
-            {/* pregunta 4 */}
-            <div className="mt-10 space-y-10">
-              <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
-                </legend>
-                <div className="mt-6 space-y-6">
-
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta4A"
-                        name="Pregunta4"
-                        type="radio"
-                        value="si"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "si" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        Si
-                      </label>
-
-                    </div>
-                  </div>
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta4B"
-                        name="Pregunta4"
-                        type="radio"
-                        value="no"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta4 === "no" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        No
-                      </label>
-                      {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
-                      </p>}
-
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-
+            {/* Entusiasta */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Cómo_te_sientes_en_esta_búsqueda_de_empleo.includes("Entusiasta") ? true : false} id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="checkbox" value="Entusiasta" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Entusiasta" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Entusiasta.</label>
             </div>
 
-            {/* pregunta 5 */}
-            <div className="mt-10 space-y-10">
-              <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
-                </legend>
-                <div className="mt-6 space-y-6">
+            {/* Otro */}
+            <div>
+              <label htmlFor="otro" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Otro</label>
+              <input name="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="text" id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+            </div>
+          </div>
 
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta5A"
-                        name="Pregunta5"
-                        type="radio"
-                        value="si"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "si" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        Si
-                      </label>
+          {/* ¿Qué buscas en un empleo?  */}
+          <div>
+            <label htmlFor="Qué_buscas_en_un_empleo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Qué buscas en un empleo? Puedes escoger varias. *</label>
 
-                    </div>
-                  </div>
-                  <div className="relative flex gap-x-3">
-                    <div className="flex h-6 items-center">
-                      <input
-                        id="Pregunta5B"
-                        name="Pregunta5"
-                        type="radio"
-                        value="no"
-                        onChange={handleChange}
-                        defaultChecked={storage?.cv.results.Pregunta5 === "no" ? true : ""}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
-                    </div>
-                    <div className="text-sm leading-6">
-                      <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        No
-                      </label>
-                      {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
-                      </p>}
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-
+            {/* Aprender */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Aprender") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Aprender" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Aprender" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Aprender</label>
             </div>
 
+            {/* Crecer profesionalmente */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Crecer_profesionalmente") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Crecer_profesionalmente" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Crecer_profesionalmente" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Crecer profesionalmente</label>
+            </div>
+
+            {/* Mejor sueldo */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejor_sueldo") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejor_sueldo" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Mejor_sueldo" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mejor sueldo</label>
+            </div>
+
+            {/* Mejor ambiente laboral */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejor_ambiente_laboral") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejor_ambiente_laboral" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Mejor_ambiente_laboral" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mejor ambiente laboral</label>
+            </div>
+
+            {/* Mejores prestaciones */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejores_prestaciones") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejores_prestaciones" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Mejores_prestaciones" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mejores prestaciones</label>
+            </div>
+
+            {/* Cambio de giro */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Cambio_de_giro") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Cambio_de_giro" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Cambio_de_giro" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cambio de giro</label>
+            </div>
+
+            {/* Estabilidad */}
+            <div className="flex items-center">
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Estabilidad") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Estabilidad" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label htmlFor="Estabilidad" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Estabilidad</label>
+            </div>
+
+
+            {/* Otro */}
+            <div>
+              <label htmlFor="otro" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Otro</label>
+              <input onChange={handleChangeChecbox} type="text" name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+
+
+        {/* Cuánto tiempo llevas desempleado */}
+        <div className="mb-6">
+          <label htmlFor="Cuánto_tiempo_llevas_desempleado" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">¿Cuánto tiempo llevas desempleado (a)? *</label>
+          <input onChange={handleChange} type="text" id="Cuánto_tiempo_llevas_desempleado" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.Cuánto_tiempo_llevas_desempleado} required />
+        </div>
+
+        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
+      </form>
+    </>
   )
 }
-

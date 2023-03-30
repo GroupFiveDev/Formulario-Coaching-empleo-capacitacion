@@ -1,7 +1,11 @@
 'use client'
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function ObjetivosPage() {
+
+  const router = useRouter();
+
   let storage
   if (process.browser) {
     storage = JSON.parse(localStorage.getItem("form"))
@@ -29,6 +33,19 @@ export default function ObjetivosPage() {
 
   useEffect(() => {
     const obj = {
+      datos_personales: {
+        correo: "",
+        nombre_completo: "",
+        numero_telefonico: "",
+        fecha_de_nacimiento: "",
+        edad: "",
+        Qué_puesto_o_empleo_buscas: "",
+        En_qué_tipo_área_o_departamentos_te_interesa_trabajar: "",
+        En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente: "",
+        Cómo_te_sientes_en_esta_búsqueda_de_empleo: [],
+        Qué_buscas_en_un_empleo: [],
+        Cuánto_tiempo_llevas_desempleado: ""
+      },
       cv: {
         results: {
           Pregunta1: "",
@@ -81,9 +98,13 @@ export default function ObjetivosPage() {
     }
   }, [])
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/grafica");
+  }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Entrevista laboral</h2>
@@ -115,6 +136,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -134,6 +156,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -169,6 +192,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -188,6 +212,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -223,6 +248,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -242,6 +268,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -249,7 +276,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional. 
+                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional.
                       </p>}
 
                     </div>
@@ -277,6 +304,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -296,6 +324,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -303,7 +332,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.  
+                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.
                       </p>}
 
                     </div>
@@ -331,6 +360,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -350,6 +380,7 @@ export default function ObjetivosPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.objetivos.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -357,7 +388,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc. 
+                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc.
                       </p>}
                     </div>
                   </div>
@@ -369,6 +400,7 @@ export default function ObjetivosPage() {
           </div>
         </div>
       </div>
+      <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
     </form>
   )
 }

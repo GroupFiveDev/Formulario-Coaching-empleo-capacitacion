@@ -1,7 +1,11 @@
 'use client'
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function EmpleoPage() {
+
+  const router = useRouter();
+
   let storage
   if (process.browser) {
     storage = JSON.parse(localStorage.getItem("form"))
@@ -29,6 +33,19 @@ export default function EmpleoPage() {
 
   useEffect(() => {
     const obj = {
+      datos_personales: {
+        correo: "",
+        nombre_completo: "",
+        numero_telefonico: "",
+        fecha_de_nacimiento: "",
+        edad: "",
+        Qué_puesto_o_empleo_buscas: "",
+        En_qué_tipo_área_o_departamentos_te_interesa_trabajar: "",
+        En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente: "",
+        Cómo_te_sientes_en_esta_búsqueda_de_empleo: [],
+        Qué_buscas_en_un_empleo: [],
+        Cuánto_tiempo_llevas_desempleado: ""
+      },
       cv: {
         results: {
           Pregunta1: "",
@@ -81,9 +98,13 @@ export default function EmpleoPage() {
     }
   }, [])
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/linkedin");
+  }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Entrevista laboral</h2>
@@ -115,6 +136,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -134,6 +156,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -141,7 +164,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta1 === "no" && <p className="text-gray-500">
-                      Es importante saber qué es lo que quieres y para ello definimos tu empleo ideal actual objetivo con 12 variables y también de manera subjetiva, estos elementos  te permitirán evaluar las propuestas laborales que se te vayan presentando en tu proceso de búsqueda. 
+                        Es importante saber qué es lo que quieres y para ello definimos tu empleo ideal actual objetivo con 12 variables y también de manera subjetiva, estos elementos  te permitirán evaluar las propuestas laborales que se te vayan presentando en tu proceso de búsqueda.
                       </p>}
                     </div>
                   </div>
@@ -169,6 +192,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -188,6 +212,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -195,7 +220,7 @@ export default function EmpleoPage() {
                         No
                       </label>
                       {results.Pregunta2 === "no" && <p className="text-gray-500">
-                      Una vez definido tu empleo ideal actual, lo que sigue es ponerte un objetivo claro en tiempo, qué y cómo vas a hacer para conseguirlo con un plan.  En el coaching de búsqueda de empleo te daré un plan de 14 días de preparación para que sepas todo lo que debes de considerar y hacerlo de ahí en adelante hasta ser contratado (a).
+                        Una vez definido tu empleo ideal actual, lo que sigue es ponerte un objetivo claro en tiempo, qué y cómo vas a hacer para conseguirlo con un plan.  En el coaching de búsqueda de empleo te daré un plan de 14 días de preparación para que sepas todo lo que debes de considerar y hacerlo de ahí en adelante hasta ser contratado (a).
                       </p>}
 
                     </div>
@@ -223,6 +248,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -242,6 +268,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -277,6 +304,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -296,6 +324,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -331,6 +360,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -349,6 +379,7 @@ export default function EmpleoPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.empleo.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -366,6 +397,7 @@ export default function EmpleoPage() {
           </div>
         </div>
       </div>
+      <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
     </form>
   )
 }
