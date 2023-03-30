@@ -1,7 +1,11 @@
 'use client'
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function LinkedinPage() {
+
+  const router = useRouter();
+
   let storage
   if (process.browser) {
     storage = JSON.parse(localStorage.getItem("form"))
@@ -25,6 +29,11 @@ export default function LinkedinPage() {
       storage.linkedin.results[e.target.name] = e.target.value
       localStorage.setItem("form", JSON.stringify(storage))
     }
+  }
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/objetivos");
   }
 
   useEffect(() => {
@@ -83,7 +92,7 @@ export default function LinkedinPage() {
 
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Entrevista laboral</h2>
@@ -115,6 +124,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -134,6 +144,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -170,6 +181,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -189,6 +201,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -224,6 +237,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -243,6 +257,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -279,6 +294,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -298,6 +314,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -334,6 +351,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -353,6 +371,7 @@ export default function LinkedinPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.linkedin.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -372,6 +391,7 @@ export default function LinkedinPage() {
           </div>
         </div>
       </div>
+      <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
     </form>
   )
 }
