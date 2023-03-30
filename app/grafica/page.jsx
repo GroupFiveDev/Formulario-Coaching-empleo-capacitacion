@@ -1,5 +1,5 @@
 const Grafica = () => {
-  return(
+  return (
     <div>Gráfica</div>
   )
 }

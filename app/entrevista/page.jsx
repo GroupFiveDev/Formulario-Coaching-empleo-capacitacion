@@ -1,11 +1,11 @@
 'use client'
 import { useEffect, useState } from "react";
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
+
 export default function EntrevistaPage() {
-
-  const router = useRouter();
-
+  const router = useRouter()
   let storage
   if (process.browser) {
     storage = JSON.parse(localStorage.getItem("form"))
@@ -109,7 +109,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sabes qué debes hacer antes, durante y después de una entrevista laboral? *
+                  ¿Sabes qué debes hacer antes, durante y después de una entrevista laboral?
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -123,7 +123,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -143,7 +142,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -165,7 +163,7 @@ export default function EntrevistaPage() {
               <fieldset>
 
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Logras mantenerte en el proceso de selección después de una entrevista? *
+                  ¿Logras mantenerte en el proceso de selección después de una entrevista?
                 </legend>
 
                 <div className="mt-6 space-y-6">
@@ -179,7 +177,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -199,7 +196,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -221,7 +217,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Sientes confianza al contestar las preguntas del reclutador? *
+                  ¿Sientes confianza al contestar las preguntas del reclutador?
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -235,7 +231,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -255,7 +250,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -277,7 +271,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Realizas el seguimiento correspondiente después de la entrevista? *
+                  ¿Realizas el seguimiento correspondiente después de la entrevista?
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -291,7 +285,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -311,7 +304,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -333,7 +325,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                  ¿Eres consciente de tus lenguajes verbal, paraverbal y corporal, durante la entrevista? *
+                  ¿Eres consciente de tus lenguajes verbal, paraverbal y corporal, durante la entrevista?
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -347,7 +339,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -367,7 +358,6 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
