@@ -102,11 +102,31 @@ export default function HomePage() {
     }
   }, [])
 
+  const validate = (results) => {
+    let errors = {};
+    if(!results.correo) errors.correo = "Debe ingresar su correo electrónico."
+    if(!results.nombre_completo) errors.nombre_completo = "Debe ingresar su nombre completo."
+    if(!results.numero_telefonico) errors.numero_telefonico = "Debe ingresar su nombre completo."
+    if(!results.fecha_de_nacimiento) errors.fecha_de_nacimiento = "Debe ingresar su nombre completo."
+    if(!results.edad) errors.edad = "Debe ingresar su nombre completo."
+    if(!results.Qué_puesto_o_empleo_buscas) errors.Qué_puesto_o_empleo_buscas = "Debe ingresar su nombre completo."
+    if(!results.En_qué_tipo_área_o_departamentos_te_interesa_trabajar) errors.En_qué_tipo_área_o_departamentos_te_interesa_trabajar = "Debe ingresar su nombre completo."
+    if(!results.En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente) errors.En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente = "Debe ingresar su nombre completo."
+    if(!results.Cómo_te_sientes_en_esta_búsqueda_de_empleo) errors.Cómo_te_sientes_en_esta_búsqueda_de_empleo = "Debe ingresar su nombre completo."
+    if(!results.Qué_buscas_en_un_empleo) errors.Qué_buscas_en_un_empleo = "Debe ingresar su nombre completo."
+    if(!results.Cuánto_tiempo_llevas_desempleado) errors.Cuánto_tiempo_llevas_desempleado = "Debe ingresar su nombre completo."
+    return errors;
+  }
+
+  const handleSubmit = () => {
+    //navegar a la siguiente página
+  }
+
   return (
     <>
 
       <h1 class="text-5xl font-extrabold dark:text-white"> Diagnóstico inicial de búsqueda de empleo.<br /><small class="ml-2 font-semibold text-gray-500 dark:text-gray-400">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</small></h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
 
           {/* correo */}
