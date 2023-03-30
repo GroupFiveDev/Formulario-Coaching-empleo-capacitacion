@@ -1,9 +1,11 @@
 'use client'
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
-import Link from 'next/link';
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
+
+  const router = useRouter();
+
   let storage
   if (process.browser) {
     storage = JSON.parse(localStorage.getItem("form"))
@@ -102,11 +104,16 @@ export default function HomePage() {
     }
   }, [])
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    router.push("/cv");
+  }
+
   return (
     <>
 
       <h1 class="text-5xl font-extrabold dark:text-white"> Diagnóstico inicial de búsqueda de empleo.<br /><small class="ml-2 font-semibold text-gray-500 dark:text-gray-400">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</small></h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
 
           {/* correo */}
@@ -124,7 +131,7 @@ export default function HomePage() {
           {/* numero_telefonico */}
           <div>
             <label htmlFor="numero_telefonico" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número telefónico (con lada), especificando ciudad y país. *</label>
-            <input onChange={handleChange} type="tel" id="numero_telefonico" name="numero_telefonico" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" defaultValue={storage?.datos_personales.numero_telefonico} required/>
+            <input onChange={handleChange} type="number" id="numero_telefonico" name="numero_telefonico" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" defaultValue={storage?.datos_personales.numero_telefonico} required/>
           </div>
 
           {/* fecha_de_nacimiento */}
@@ -254,9 +261,8 @@ export default function HomePage() {
           <input onChange={handleChange} type="text" id="Cuánto_tiempo_llevas_desempleado" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.Cuánto_tiempo_llevas_desempleado} required/>
         </div>
 
-        <Link href={"/cv"}>
-          <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
-        </Link>
+        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
+      
       </form>
     </>
   )
