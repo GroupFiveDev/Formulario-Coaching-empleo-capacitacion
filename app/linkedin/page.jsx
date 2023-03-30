@@ -29,6 +29,19 @@ export default function LinkedinPage() {
 
   useEffect(() => {
     const obj = {
+      datos_personales: {
+        correo: "",
+        nombre_completo: "",
+        numero_telefonico: "",
+        fecha_de_nacimiento: "",
+        edad: "",
+        Qué_puesto_o_empleo_buscas: "",
+        En_qué_tipo_área_o_departamentos_te_interesa_trabajar: "",
+        En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente: "",
+        Cómo_te_sientes_en_esta_búsqueda_de_empleo: [],
+        Qué_buscas_en_un_empleo: [],
+        Cuánto_tiempo_llevas_desempleado: ""
+      },
       cv: {
         results: {
           Pregunta1: "",
@@ -101,7 +114,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Tienes perfil de Linkedin? *
+                  ¿Tienes perfil de Linkedin? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -141,7 +154,7 @@ export default function LinkedinPage() {
                         No
                       </label>
                       {results.Pregunta1 === "no" && <p className="text-gray-500">
-                      Hay ciertos perfiles profesionales (operativos o algunos técnicos) para los que no es necesario tener un perfil de Linkedin pero si  el tuyo sí lo es y no  lo tienes, considera abrir uno. 
+                        Hay ciertos perfiles profesionales (operativos o algunos técnicos) para los que no es necesario tener un perfil de Linkedin pero si  el tuyo sí lo es y no  lo tienes, considera abrir uno.
 
                       </p>}
                     </div>
@@ -156,7 +169,7 @@ export default function LinkedinPage() {
               <fieldset>
 
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Tu perfil de Linkedin está actualizado? *
+                  ¿Tu perfil de Linkedin está actualizado? *
                 </legend>
 
                 <div className="mt-6 space-y-6">
@@ -196,7 +209,7 @@ export default function LinkedinPage() {
                         No
                       </label>
                       {results.Pregunta2 === "no" && <p className="text-gray-500">
-                      No solamente necesitas tener un perfil que te venda y esté actualizado (con tu foto e información). Normalmente, después de haber  trabajado con tu C.V. ya es más  fácil que utilices tu perfil y tus logros bien redactados para mejorar tu Linkedin.
+                        No solamente necesitas tener un perfil que te venda y esté actualizado (con tu foto e información). Normalmente, después de haber  trabajado con tu C.V. ya es más  fácil que utilices tu perfil y tus logros bien redactados para mejorar tu Linkedin.
                       </p>}
 
                     </div>
@@ -210,7 +223,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Eres miembro activo en Linkedin? Lo revisas y/o publicas al menos 3 veces por semana. * 
+                  ¿Eres miembro activo en Linkedin? Lo revisas y/o publicas al menos 3 veces por semana. *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -250,7 +263,7 @@ export default function LinkedinPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                      Si no revisas tu perfil, no publicas, no contactas con nadie, de nada sirve que lo tengas actualizado. Es como tener una herramienta guardada y no ocuparla.
+                        Si no revisas tu perfil, no publicas, no contactas con nadie, de nada sirve que lo tengas actualizado. Es como tener una herramienta guardada y no ocuparla.
 
                       </p>}
 
@@ -265,7 +278,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Eres visible en Linkedin? Es decir, ¿te piden contactar contigo y has incrementado tu lista de contactos? *
+                  ¿Eres visible en Linkedin? Es decir, ¿te piden contactar contigo y has incrementado tu lista de contactos? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -305,7 +318,7 @@ export default function LinkedinPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                      Si no contactas de manera deliberada con personas que te ayuden a conseguir el empleo que quieres y no estás incrementando tu red, entonces no estás ocupando tu perfil de manera adecuada para cumplir  tu objetivo, debes tener una actitud más activa frente a tu búsqueda de empleo.
+                        Si no contactas de manera deliberada con personas que te ayuden a conseguir el empleo que quieres y no estás incrementando tu red, entonces no estás ocupando tu perfil de manera adecuada para cumplir  tu objetivo, debes tener una actitud más activa frente a tu búsqueda de empleo.
 
                       </p>}
 
@@ -320,7 +333,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
-                ¿Sabes usar Linkedin para buscar empleo? *
+                  ¿Sabes usar Linkedin para buscar empleo? *
                 </legend>
                 <div className="mt-6 space-y-6">
 
@@ -360,7 +373,7 @@ export default function LinkedinPage() {
                         No
                       </label>
                       {results.Pregunta5 === "no" && <p className="text-gray-500">
-                      Si no sabes qué debes hacer para estar más visible  para  los reclutadores y/ o lo sabes pero no lo estás  haciendo,  ahí tienes una gran área de oportunidad.
+                        Si no sabes qué debes hacer para estar más visible  para  los reclutadores y/ o lo sabes pero no lo estás  haciendo,  ahí tienes una gran área de oportunidad.
                       </p>}
                     </div>
                   </div>

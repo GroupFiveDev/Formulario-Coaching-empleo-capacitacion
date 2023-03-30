@@ -29,6 +29,19 @@ export default function ObjetivosPage() {
 
   useEffect(() => {
     const obj = {
+      datos_personales: {
+        correo: "",
+        nombre_completo: "",
+        numero_telefonico: "",
+        fecha_de_nacimiento: "",
+        edad: "",
+        Qué_puesto_o_empleo_buscas: "",
+        En_qué_tipo_área_o_departamentos_te_interesa_trabajar: "",
+        En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente: "",
+        Cómo_te_sientes_en_esta_búsqueda_de_empleo: [],
+        Qué_buscas_en_un_empleo: [],
+        Cuánto_tiempo_llevas_desempleado: ""
+      },
       cv: {
         results: {
           Pregunta1: "",
@@ -249,7 +262,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional. 
+                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional.
                       </p>}
 
                     </div>
@@ -303,7 +316,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.  
+                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.
                       </p>}
 
                     </div>
@@ -357,7 +370,7 @@ export default function ObjetivosPage() {
                         No
                       </label>
                       {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc. 
+                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc.
                       </p>}
                     </div>
                   </div>
