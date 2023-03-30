@@ -1,6 +1,11 @@
+'use client'
+import Chart from "./Chart"
+
 const Grafica = () => {
   return (
-    <div>Gráfica</div>
+    <div>
+      <Chart/>
+    </div>
   )
 }
 
