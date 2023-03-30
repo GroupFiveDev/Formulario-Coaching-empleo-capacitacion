@@ -4,8 +4,14 @@ import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
   const router = useRouter()
-  const [storage] = useState(JSON.parse(localStorage.getItem("form")))
+  // const [storage, setStorage] = useState(JSON.parse(localStorage.getItem("form")))
+  // const [storage, setStorage] = useState()
+  let storage
 
+
+  if (typeof window !== 'undefined') {
+    storage = JSON.parse(localStorage.getItem("form"))
+  }
 
 
   const [results, setResults] = useState({
@@ -115,11 +121,11 @@ export default function HomePage() {
         }
       }
     }
-    if (process.browser) {
-      if (!storage)
-        localStorage.setItem("form", JSON.stringify(obj))
-    }
-  }, [])
+    // if (process.browser) {
+    if (!storage)
+      localStorage.setItem("form", JSON.stringify(obj))
+    // }
+  })
 
   return (
     <>
