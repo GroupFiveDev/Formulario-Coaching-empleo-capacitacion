@@ -30,11 +30,6 @@ export default function LinkedinPage() {
       localStorage.setItem("form", JSON.stringify(storage))
     }
   }
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    router.push("/objetivos");
-  }
 
   useEffect(() => {
     const obj = {
@@ -90,6 +85,10 @@ export default function LinkedinPage() {
     }
   }, [])
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push("/objetivos");
+  }
 
   return (
     <form onSubmit={handleSubmit}>
