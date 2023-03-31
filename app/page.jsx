@@ -137,13 +137,13 @@ export default function HomePage() {
           {/* correo */}
           <div>
             <label htmlFor="correo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección de correo electrónico *</label>
-            <input onChange={handleChange} type="email" id="correo" name="correo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.correo} required />
+            <input onChange={handleChange} type="email" id="correo" name="correo" className="bg-red-500 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.correo} required />
           </div>
 
           {/* Nombre completo */}
           <div>
             <label htmlFor="nombre_completo" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre completo *</label>
-            <input onChange={handleChange} type="text" id="nombre_completo" placeholder='Nombre Completo' name="nombre_completo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.nombre_completo} required />
+            <input onChange={handleChange} type="text" id="nombre_completo" placeholder='Nombre Completo' name="nombre_completo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-400 dark:black dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue={storage?.datos_personales.nombre_completo} required />
           </div>
 
           {/* numero_telefonico */}
