@@ -176,7 +176,6 @@ export default function EmpleoPage() {
             {/* pregunta 2 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Tienes un objetivo y un plan de búsqueda de empleo? *
                 </legend>
