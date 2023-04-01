@@ -93,25 +93,16 @@ export default function EntrevistaPage() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
-        <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Entrevista laboral</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-            This information will be displayed publicly so be careful what you share.
-          </p>
-
-          <div className="border-b border-gray-900/10 pb-12">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-              We'll always let you know about important changes, but you pick what else you want to hear about.
-            </p>
-
+        <div className="flex flex-col items-center text-center border-gray-900/10">
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-1">Entrevista</h1>
+          <div className="border-gray-900/10 pb-12">
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Sabes qué debes hacer antes, durante y después de una entrevista laboral?
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -168,7 +159,7 @@ export default function EntrevistaPage() {
                   ¿Logras mantenerte en el proceso de selección después de una entrevista?
                 </legend>
 
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
                       <input
@@ -223,7 +214,7 @@ export default function EntrevistaPage() {
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Sientes confianza al contestar las preguntas del reclutador?
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -279,7 +270,7 @@ export default function EntrevistaPage() {
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Realizas el seguimiento correspondiente después de la entrevista?
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -335,7 +326,7 @@ export default function EntrevistaPage() {
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Eres consciente de tus lenguajes verbal, paraverbal y corporal, durante la entrevista?
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -385,9 +376,12 @@ export default function EntrevistaPage() {
             </div>
 
           </div>
+          <div className="flex justify-center gap-5">
+            <button type="button" onClick={() => router.push("/empleo")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
+            <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
+          </div>
         </div>
       </div>
-      <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
     </form>
   )
 }
