@@ -183,7 +183,7 @@ export default function HomePage() {
           </div>
 
           {/* Cómo_te_sientes_en_esta_búsqueda_de_empleo */}
-          <div>
+          <div required>
             <label htmlFor="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="block mb-2 text-sm font-medium text-gray-900">¿Cómo te sientes en esta búsqueda de empleo?  Puedes elegir varias opciones. *</label>
 
             {/* Motivado */}
@@ -213,17 +213,18 @@ export default function HomePage() {
             {/* Otro */}
             <div>
               <label htmlFor="otro" className="block mb-2 text-sm font-medium text-gray-900">Otro</label>
-              <input name="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="text" id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+              <input name="Cómo_te_sientes_en_esta_búsqueda_de_empleo" type="text" id="Cómo_te_sientes_en_esta_búsqueda_de_empleo" placeholder="especificar..." className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
             </div>
           </div>
 
           {/* ¿Qué buscas en un empleo?  */}
+
           <div>
             <label htmlFor="Qué_buscas_en_un_empleo" className="block mb-2 text-sm font-medium text-gray-900">¿Qué buscas en un empleo? Puedes escoger varias. *</label>
 
             {/* Aprender */}
             <div className="flex items-center">
-              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Aprender") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Aprender" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Aprender") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Aprender" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"/>
               <label htmlFor="Aprender" className="ml-2 text-sm font-medium text-gray-900">Aprender</label>
             </div>
 
@@ -241,13 +242,13 @@ export default function HomePage() {
 
             {/* Mejor ambiente laboral */}
             <div className="flex items-center">
-              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejor_ambiente_laboral") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejor_ambiente_laboral" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejor_ambiente_laboral") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejor_ambiente_laboral" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"/>
               <label htmlFor="Mejor_ambiente_laboral" className="ml-2 text-sm font-medium text-gray-900">Mejor ambiente laboral</label>
             </div>
 
             {/* Mejores prestaciones */}
             <div className="flex items-center">
-              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejores_prestaciones") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejores_prestaciones" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejores_prestaciones") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejores_prestaciones" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"/>
               <label htmlFor="Mejores_prestaciones" className="ml-2 text-sm font-medium text-gray-900">Mejores prestaciones</label>
             </div>
 
@@ -263,15 +264,13 @@ export default function HomePage() {
               <label htmlFor="Estabilidad" className="ml-2 text-sm font-medium text-gray-900">Estabilidad</label>
             </div>
 
-
             {/* Otro */}
             <div>
               <label htmlFor="otro" className="block mb-2 text-sm font-medium text-gray-900">Otro</label>
-              <input onChange={handleChangeChecbox} type="text" name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+              <input onChange={handleChangeChecbox} type="text" name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" placeholder="especificar..." className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
             </div>
           </div>
         </div>
-
 
         {/* Cuánto tiempo llevas desempleado */}
         <div className="mb-6">
