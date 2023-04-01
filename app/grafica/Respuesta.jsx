@@ -162,18 +162,26 @@ const Respuesta = ({amount, category, entrevista6}) => {
                 {
                     amount <= 80 ?
                     <div>
-                        <h1>1) Coaching de C.V. creativo y de alto impacto. 3 horas.</h1>
+                        <h1>4)Coaching de uso de Linkedin para buscar trabajo. 1.5 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
                         <br />
-                        <h3>Te puedo enseñar cómo evaluar una vacante de tu interés antes de postularte, cómo adaptar tu C.V.a dicha vacante y cómo redactar una carta depresentación interesante que complemente tu postulación.</h3>
-                        <h3>Te enseñaré a redactar tus logros demanera que estén incluidas tus fortalezas y puedas venderte mucho mejor.</h3>
-                        <h3>Te servirá la información de tu C.V. para actualizar tu perfil de Linkedin y bolsas en las que estés registrado.</h3>
-                        <h3>Incluye: 3revisiones a tu C.V., 2 a tu carta, 1 a tu vacante y 1 a tu perfil de Linkedin.</h3>
+                        <h3>Este servicio es para que destaques tu perfil y lo hagas más visible tanto para el buscador interno de Linkedin como para los reclutadores.</h3>
+                        <h3>Revisaremos tu perfil de Linkedin y te iré indicando cómo mejorarlo.</h3>
+                        <h3>Te daré tips para aprovechar al máximo tu red de contactos en Linkedin y cómo usarlo para buscar tu empleo ideal actual.</h3>
+                        <h1>Incluye:</h1>
+                        <br />
+                        <h3>Sesión de hora y media. Virtual (Google Meet o Jitsi).</h3>
+                        <h3>Formato de autoevaluación de perfil.</h3>
+                        <h3>Dos revisiones posteriores y retroalimentación.</h3>
+                        <br />
+                        <h1>Valor:</h1>
+                        <br />
+                        <h3>$600 M.N.</h3>
                     </div>
                     :
                     <div>
-                        <h1>C.V. creativo</h1>
+                        <h1>Coaching de uso de Linkedin para buscar trabajo.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
                 }
