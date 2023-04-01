@@ -43,7 +43,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                 {
                     entrevista6 === "no" ?
                     <div>
-                        <h1>1) Coaching de preparación de entrevista laboral. 3 horas.</h1>
+                        <h1>2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
                         <br />
@@ -66,7 +66,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     :
                     amount <= 60 ?
                     <div>
-                        <h1>1) Coaching de preparación de entrevista laboral. 3 horas.</h1>
+                        <h1>2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
                         <br />
@@ -124,18 +124,31 @@ const Respuesta = ({amount, category, entrevista6}) => {
                 {
                     amount <= 80 ?
                     <div>
-                        <h1>1) Coaching de C.V. creativo y de alto impacto. 3 horas.</h1>
+                        <h1>3) Coaching de búsqueda de empleo. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
                         <br />
-                        <h3>Te puedo enseñar cómo evaluar una vacante de tu interés antes de postularte, cómo adaptar tu C.V.a dicha vacante y cómo redactar una carta depresentación interesante que complemente tu postulación.</h3>
-                        <h3>Te enseñaré a redactar tus logros demanera que estén incluidas tus fortalezas y puedas venderte mucho mejor.</h3>
-                        <h3>Te servirá la información de tu C.V. para actualizar tu perfil de Linkedin y bolsas en las que estés registrado.</h3>
-                        <h3>Incluye: 3revisiones a tu C.V., 2 a tu carta, 1 a tu vacante y 1 a tu perfil de Linkedin.</h3>
+                        <h3>Definirás tu empleo ideal actual objetivo (12 variables) y subjetivo para que enfoques tu búsqueda y puedas evaluar cualquier vacante antes de postularte.</h3>
+                        <h3>Conocerás la efectividad de las fuentes de empleo.</h3>
+                        <h3>Llevarás a cabo un plan CON 14 RETOS DIARIOS para poder conseguir el empleo que quieres en el menor tiempo posible aprovechando tu red de contactos.</h3>
+                        <h3>Realizarás un FODA personal con el que descubrirás tus talentos y fortalezas para que los puedas vender en tu C.V. y entrevistas.</h3>
+                        <h1>Incluye:</h1>
+                        <br />
+                        <h3>Sesión de tres horas virtuales (Google Meet o Jitsi).</h3>
+                        <h3>Plan de trabajo con 14 retos diarios con retroalimentación.</h3>
+                        <h3>Seguimiento durante el tiempo que dure el coaching por WA y correo.</h3>
+                        <h3>Sesión de 1 hora para aterrizar el plan de búsqueda al finalizar los retos.</h3>
+                        <h3>Sesión de 1 hora para revisar avances (uno y dos meses después).</h3>
+                        <h3>Archivo de empresas y contactos.</h3>
+                        <h3>Archivo de talentos de Gallup.</h3>
+                        <br />
+                        <h1>Valor:</h1>
+                        <br />
+                        <h3>$2,000 M.N.</h3>
                     </div>
                     :
                     <div>
-                        <h1>C.V. creativo</h1>
+                        <h1>Coaching de búsqueda de empleo.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
                 }
