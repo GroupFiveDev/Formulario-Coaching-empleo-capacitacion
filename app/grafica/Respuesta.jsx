@@ -195,18 +195,27 @@ const Respuesta = ({amount, category, entrevista6}) => {
                 {
                     amount <= 80 ?
                     <div>
-                        <h1>1) Coaching de C.V. creativo y de alto impacto. 3 horas.</h1>
+                        <h1>5)Coaching de proyecto de vida y carrera. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
                         <br />
-                        <h3>Te puedo enseñar cómo evaluar una vacante de tu interés antes de postularte, cómo adaptar tu C.V.a dicha vacante y cómo redactar una carta depresentación interesante que complemente tu postulación.</h3>
-                        <h3>Te enseñaré a redactar tus logros demanera que estén incluidas tus fortalezas y puedas venderte mucho mejor.</h3>
-                        <h3>Te servirá la información de tu C.V. para actualizar tu perfil de Linkedin y bolsas en las que estés registrado.</h3>
-                        <h3>Incluye: 3revisiones a tu C.V., 2 a tu carta, 1 a tu vacante y 1 a tu perfil de Linkedin.</h3>
+                        <h3>Esta opción es para hacer un mapa mental que te permita tener una visión global de tu vida.</h3>
+                        <h3>Podrás definir dónde estás el día de hoy en todas las esferas de tu vida: salud, social, familia y trabajo/vocación.</h3>
+                        <h3>La finalidad es que establezcas a dónde quieres llegar y definas objetivos claros que puedas llevar a cabo, a través de un plan de trabajo de 12 días.</h3>
+                        <h3>Definirás tu misión, visión y valores.</h3>
+                        <h3>Harás un Vision Board de tu proyecto de vida.</h3>
+                        <h1>Incluye:</h1>
+                        <br />
+                        <h3>Sesión de tres horas. virtual (Google Meet o Jitsi).</h3>
+                        <h3>Plan de trabajo de 12 días.</h3>
+                        <br />
+                        <h1>Valor:</h1>
+                        <br />
+                        <h3>$1000 M.N.</h3>
                     </div>
                     :
                     <div>
-                        <h1>C.V. creativo</h1>
+                        <h1>Coaching de proyecto de vida y carrera.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
                 }
