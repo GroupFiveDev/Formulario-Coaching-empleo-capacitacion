@@ -123,6 +123,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta1 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -142,6 +143,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta1 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -177,6 +179,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta2 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -196,6 +199,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta2 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -231,6 +235,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta3 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -250,6 +255,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta3 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -285,6 +291,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta4 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -304,6 +311,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta4 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -339,6 +347,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta5 === "si" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
@@ -358,6 +367,7 @@ export default function EntrevistaPage() {
                         onChange={handleChange}
                         defaultChecked={storage?.entrevista.results.Pregunta5 === "no" ? true : ""}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        required
                       />
                     </div>
                     <div className="text-sm leading-6">
