@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 
 export default function CvPage() {
-  
+
   const router = useRouter();
 
   let storage
@@ -106,25 +106,16 @@ export default function CvPage() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
-        <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Entrevista laboral</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-            This information will be displayed publicly so be careful what you share.
-          </p>
-
-          <div className="border-b border-gray-900/10 pb-12">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-              We'll always let you know about important changes, but you pick what else you want to hear about.
-            </p>
-
+        <div className="flex flex-col items-center text-center border-gray-900/10">
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-1">Cv creativo</h1>
+          <div className=" border-gray-900/10 pb-12">
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -181,7 +172,7 @@ export default function CvPage() {
                   ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
                 </legend>
 
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
                       <input
@@ -236,7 +227,7 @@ export default function CvPage() {
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Tu C.V. contiene tus mejores logros y fortalezas? *
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -292,7 +283,7 @@ export default function CvPage() {
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -348,7 +339,7 @@ export default function CvPage() {
                 <legend className="text-sm font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
                 </legend>
-                <div className="mt-6 space-y-6">
+                <div className="mt-6 space-y-6 flex flex-col items-center">
 
                   <div className="relative flex gap-x-3">
                     <div className="flex h-6 items-center">
@@ -396,11 +387,13 @@ export default function CvPage() {
               </fieldset>
 
             </div>
-
+          </div>
+          <div className="flex justify-center gap-5">
+            <button type="button" onClick={() => router.push("")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
+            <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Siguiente</button>
           </div>
         </div>
       </div>
-      <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
     </form>
   )
 }
