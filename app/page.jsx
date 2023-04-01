@@ -43,8 +43,8 @@ export default function HomePage() {
   function handleChangeChecbox(e) {
     const value = e.target.value
     if (storage.datos_personales[e.target.id].includes(value)) {
-      // const index = results[e.target.id].findIndex(e => e === value)
-      // results[e.target.id].splice(index, 1)
+      const index = results[e.target.id].findIndex(e => e === value)
+      results[e.target.id].splice(index, 1)
 
       const index2 = storage.datos_personales[e.target.id].findIndex(e => e === value)
       storage.datos_personales[e.target.id].splice(index2, 1)
@@ -128,9 +128,9 @@ export default function HomePage() {
   })
 
   return (
-    <>
-
-      <h1 className="text-5xl font-extrabold"> Diagnóstico inicial de búsqueda de empleo.<br /><small className="ml-2 font-semibold text-gray-500 dark:text-gray-400">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</small></h1>
+    <div className="p-2">
+      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-1"> Diagnóstico inicial de búsqueda de empleo.</h1>
+      <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</p>
       <form onSubmit={handleSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
 
@@ -224,7 +224,7 @@ export default function HomePage() {
 
             {/* Aprender */}
             <div className="flex items-center">
-              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Aprender") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Aprender" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"/>
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Aprender") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Aprender" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
               <label htmlFor="Aprender" className="ml-2 text-sm font-medium text-gray-900">Aprender</label>
             </div>
 
@@ -242,13 +242,13 @@ export default function HomePage() {
 
             {/* Mejor ambiente laboral */}
             <div className="flex items-center">
-              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejor_ambiente_laboral") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejor_ambiente_laboral" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"/>
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejor_ambiente_laboral") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejor_ambiente_laboral" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
               <label htmlFor="Mejor_ambiente_laboral" className="ml-2 text-sm font-medium text-gray-900">Mejor ambiente laboral</label>
             </div>
 
             {/* Mejores prestaciones */}
             <div className="flex items-center">
-              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejores_prestaciones") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejores_prestaciones" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"/>
+              <input onChange={handleChangeChecbox} defaultChecked={results.Qué_buscas_en_un_empleo.includes("Mejores_prestaciones") ? true : false} name="Qué_buscas_en_un_empleo" id="Qué_buscas_en_un_empleo" type="checkbox" value="Mejores_prestaciones" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
               <label htmlFor="Mejores_prestaciones" className="ml-2 text-sm font-medium text-gray-900">Mejores prestaciones</label>
             </div>
 
@@ -277,9 +277,10 @@ export default function HomePage() {
           <label htmlFor="Cuánto_tiempo_llevas_desempleado" className="block mb-2 text-sm font-medium text-gray-900">¿Cuánto tiempo llevas desempleado (a)? *</label>
           <input onChange={handleChange} type="text" id="Cuánto_tiempo_llevas_desempleado" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" defaultValue={storage?.datos_personales.Cuánto_tiempo_llevas_desempleado} required />
         </div>
-
-        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Siguiente</button>
+        <div className="flex justify-center gap-5">
+          <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Siguiente</button>
+        </div>
       </form>
-    </>
+    </div>
   )
 }
