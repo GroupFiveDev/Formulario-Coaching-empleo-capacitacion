@@ -129,8 +129,8 @@ export default function HomePage() {
 
   return (
     <div className="p-2">
-      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-1"> Diagnóstico inicial de búsqueda de empleo.</h1>
-      <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</p>
+      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-red-600 md:text-5xl lg:text-1"> Diagnóstico inicial de búsqueda de empleo.</h1>
+      <p className="mb-6 text-lg font-normal text-blue-800 lg:text-xl">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</p>
       <form onSubmit={handleSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
 
