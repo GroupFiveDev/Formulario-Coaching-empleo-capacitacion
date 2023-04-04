@@ -1,14 +1,16 @@
+'use client'
+
 const Respuesta = ({amount, category, entrevista6}) => {
     
     if(category === "cv") {
         return(
             <div>
                 {
-                    amount <= 80 ?
-                    <div>
+                    amount && amount <= 80 ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>1) Coaching de C.V. creativo y de alto impacto. 3 horas.</h1>
                         <br />
-                        <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1>Tienes {amount && amount} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>Te puedo enseñar cómo evaluar una vacante de tu interés antes de postularte, cómo adaptar tu C.V.a dicha vacante y cómo redactar una carta depresentación interesante que complemente tu postulación.</h3>
                         <h3>Te enseñaré a redactar tus logros demanera que estén incluidas tus fortalezas y puedas venderte mucho mejor.</h3>
@@ -28,7 +30,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>$1,000 M.N.</h3>
                     </div>
                     :
-                    <div>
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>C.V. creativo y de alto impacto.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -41,8 +43,31 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    entrevista6 === "no" ?
-                    <div>
+                    entrevista6 && entrevista6 === "no" ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
+                        <h1>2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
+                        <br />
+                        <h1>Tienes {amount && amount} puntos de acuerdo al diagnóstico.</h1>
+                        <br />
+                        <h3>Sabrás cómo debes prepararte para una entrevista laboral (antes, durante y después), con la finalidad de aumentar tu confianza frente al reclutador.</h3>
+                        <h3>Te daré tips de qué elementos debes cuidar en todo momento: tus lenguajes y tu imagen personal.</h3>
+                        <h3>Antes de nuestra sesión, responderás por escrito las 50 preguntas más comunes en una entrevista y elegirás las 10 que te cuesten más trabajo para enfocarnos en ellas.</h3>
+                        <h3>Aprenderás cómo contestar de manera adecuada para venderte mejor e incrementar tus posibilidades de ser contratado (a).</h3>
+                        <h3>También realizarás tu pitch para presentarte de manera profesional.</h3>
+                        <h3>Despejaré cualquier duda que tengas de tus previas experiencias.</h3>
+                        <h1>Incluye:</h1>
+                        <br />
+                        <h3>Sesión de 3 horas. Virtual (Google Meet o Jitsi).</h3>
+                        <h3>Formato de autoevaluación de entrevistas.</h3>
+                        <h3>Archivo con las 50 preguntas más comunes en una entrevista laboral.</h3>
+                        <br />
+                        <h1>Valor:</h1>
+                        <br />
+                        <h3>$1,000 M.N.</h3>
+                    </div>
+                    :
+                    amount && amount <= 60 ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
@@ -64,31 +89,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>$1,000 M.N.</h3>
                     </div>
                     :
-                    amount <= 60 ?
-                    <div>
-                        <h1>2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
-                        <br />
-                        <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
-                        <br />
-                        <h3>Sabrás cómo debes prepararte para una entrevista laboral (antes, durante y después), con la finalidad de aumentar tu confianza frente al reclutador.</h3>
-                        <h3>Te daré tips de qué elementos debes cuidar en todo momento: tus lenguajes y tu imagen personal.</h3>
-                        <h3>Antes de nuestra sesión, responderás por escrito las 50 preguntas más comunes en una entrevista y elegirás las 10 que te cuesten más trabajo para enfocarnos en ellas.</h3>
-                        <h3>Aprenderás cómo contestar de manera adecuada para venderte mejor e incrementar tus posibilidades de ser contratado (a).</h3>
-                        <h3>También realizarás tu pitch para presentarte de manera profesional.</h3>
-                        <h3>Despejaré cualquier duda que tengas de tus previas experiencias.</h3>
-                        <h1>Incluye:</h1>
-                        <br />
-                        <h3>Sesión de 3 horas. Virtual (Google Meet o Jitsi).</h3>
-                        <h3>Formato de autoevaluación de entrevistas.</h3>
-                        <h3>Archivo con las 50 preguntas más comunes en una entrevista laboral.</h3>
-                        <br />
-                        <h1>Valor:</h1>
-                        <br />
-                        <h3>$1,000 M.N.</h3>
-                    </div>
-                    :
-                    amount = 80 ?
-                    <div>
+                    (amount && amount) == 80 ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <br />
                         <h1>2) Coaching de simulación de entrevista laboral. 1.5 horas.</h1>
                         <br />
@@ -109,7 +111,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>Bilingüe $800 M.N.</h3>
                     </div>    
                     :
-                    <div>
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>Coaching de simulación de entrevista laboral.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -122,8 +124,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    amount <= 80 ?
-                    <div>
+                    (amount && amount <= 80) ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>3) Coaching de búsqueda de empleo. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
@@ -147,7 +149,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>$2,000 M.N.</h3>
                     </div>
                     :
-                    <div>
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>Coaching de búsqueda de empleo.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -160,8 +162,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    amount <= 80 ?
-                    <div>
+                    (amount && amount <= 80) ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>4)Coaching de uso de Linkedin para buscar trabajo. 1.5 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
@@ -180,7 +182,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>$600 M.N.</h3>
                     </div>
                     :
-                    <div>
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>Coaching de uso de Linkedin para buscar trabajo.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -193,8 +195,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    amount <= 80 ?
-                    <div>
+                    (amount && amount <= 80) ?
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>5)Coaching de proyecto de vida y carrera. 3 horas.</h1>
                         <br />
                         <h1>Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
@@ -214,7 +216,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>$1000 M.N.</h3>
                     </div>
                     :
-                    <div>
+                    <div className="bg-yellow-300 border-2 border-black rounded-md m-5 p-5 flex flex-col items-center font-bold">
                         <h1>Coaching de proyecto de vida y carrera.</h1>
                         <h1>Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
