@@ -57,7 +57,7 @@ const Chart = () => {
         }
     })
 
-    const labels = ["CV creativo", "Entrevista Laboral", "Busqueda de empleo", "Proyecto de vida", "LinkedIn", "Esperado"];
+    const labels = ["CV creativo", "Entrevista Laboral", "Busqueda de empleo", "LinkedIn", "Proyecto de vida", "Esperado"];
     const data = {
     labels: labels,
     datasets: [{

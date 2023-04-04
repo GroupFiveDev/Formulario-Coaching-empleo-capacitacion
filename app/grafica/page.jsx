@@ -51,10 +51,12 @@ const Grafica = () => {
   }
 
   return (
-    <div>
-      <h1>RESULTADOS.</h1>
-      <h1>Diagnóstico inicial de búsqueda de empleo.</h1>
-      <h1>Nombre: {storage?.datos_personales.nombre_completo}</h1>
+    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100">
+      <div className="flex flex-col items-center">
+        <h1 className="text-red-600 text-2xl font-bold">RESULTADOS</h1>
+        <h1 className="text-blue-800 font-bold">Diagnóstico inicial de búsqueda de empleo.</h1>
+        <h1 className="text-blue-800 font-bold">Nombre: {storage?.datos_personales.nombre_completo}</h1>
+      </div>
       <Chart />
       <Respuesta category="cv" amount={amount?.cv} />
       <Respuesta category="entrevista" amount={amount?.entrevista} entrevista6={storage?.entrevista.results.pregunta1} />
