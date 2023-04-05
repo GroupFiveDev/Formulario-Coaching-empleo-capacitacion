@@ -104,6 +104,7 @@ export default function LinkedinPage() {
   }
 
   return (
+    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
@@ -112,7 +113,7 @@ export default function LinkedinPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tienes perfil de Linkedin? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -154,12 +155,12 @@ export default function LinkedinPage() {
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta1 === "no" && <p className="text-gray-500">
+                    </div>
+                  </div>
+                      {results.Pregunta1 === "no" && <p className="text-blue-800">
                         Hay ciertos perfiles profesionales (operativos o algunos técnicos) para los que no es necesario tener un perfil de Linkedin pero si  el tuyo sí lo es y no  lo tienes, considera abrir uno.
 
                       </p>}
-                    </div>
-                  </div>
                 </div>
               </fieldset>
 
@@ -169,7 +170,7 @@ export default function LinkedinPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
 
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tu perfil de Linkedin está actualizado? *
                 </legend>
 
@@ -211,12 +212,12 @@ export default function LinkedinPage() {
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        No solamente necesitas tener un perfil que te venda y esté actualizado (con tu foto e información). Normalmente, después de haber  trabajado con tu C.V. ya es más  fácil que utilices tu perfil y tus logros bien redactados para mejorar tu Linkedin.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta2 === "no" && <p className="text-blue-800">
+                        No solamente necesitas tener un perfil que te venda y esté actualizado (con tu foto e información). Normalmente, después de haber  trabajado con tu C.V. ya es más  fácil que utilices tu perfil y tus logros bien redactados para mejorar tu Linkedin.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -225,7 +226,7 @@ export default function LinkedinPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Eres miembro activo en Linkedin? Lo revisas y/o publicas al menos 3 veces por semana. *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -267,13 +268,13 @@ export default function LinkedinPage() {
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si no revisas tu perfil, no publicas, no contactas con nadie, de nada sirve que lo tengas actualizado. Es como tener una herramienta guardada y no ocuparla.
-
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta3 === "no" && <p className="text-blue-800">
+                        Si no revisas tu perfil, no publicas, no contactas con nadie, de nada sirve que lo tengas actualizado. Es como tener una herramienta guardada y no ocuparla.
+
+                      </p>}
                 </div>
               </fieldset>
 
@@ -282,7 +283,7 @@ export default function LinkedinPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Eres visible en Linkedin? Es decir, ¿te piden contactar contigo y has incrementado tu lista de contactos? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -324,13 +325,13 @@ export default function LinkedinPage() {
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no contactas de manera deliberada con personas que te ayuden a conseguir el empleo que quieres y no estás incrementando tu red, entonces no estás ocupando tu perfil de manera adecuada para cumplir  tu objetivo, debes tener una actitud más activa frente a tu búsqueda de empleo.
-
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta4 === "no" && <p className="text-blue-800">
+                        Si no contactas de manera deliberada con personas que te ayuden a conseguir el empleo que quieres y no estás incrementando tu red, entonces no estás ocupando tu perfil de manera adecuada para cumplir  tu objetivo, debes tener una actitud más activa frente a tu búsqueda de empleo.
+
+                      </p>}
                 </div>
               </fieldset>
 
@@ -339,7 +340,7 @@ export default function LinkedinPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes usar Linkedin para buscar empleo? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -381,11 +382,11 @@ export default function LinkedinPage() {
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si no sabes qué debes hacer para estar más visible  para  los reclutadores y/ o lo sabes pero no lo estás  haciendo,  ahí tienes una gran área de oportunidad.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta5 === "no" && <p className="text-blue-800">
+                        Si no sabes qué debes hacer para estar más visible  para  los reclutadores y/ o lo sabes pero no lo estás  haciendo,  ahí tienes una gran área de oportunidad.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -393,12 +394,13 @@ export default function LinkedinPage() {
 
           </div>
           <div className="flex justify-center gap-5">
-            <button type="button" onClick={() => router.push("/entrevista")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
+            <button type="button" onClick={() => router.push("/empleo")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
           </div>
         </div>
       </div>
     </form>
+    </div>
   )
 }
 

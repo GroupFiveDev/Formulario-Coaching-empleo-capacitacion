@@ -104,6 +104,7 @@ export default function EmpleoPage() {
   }
 
   return (
+    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
@@ -112,7 +113,7 @@ export default function EmpleoPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cuál es tu empleo ideal actual? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -154,11 +155,11 @@ export default function EmpleoPage() {
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Es importante saber qué es lo que quieres y para ello definimos tu empleo ideal actual objetivo con 12 variables y también de manera subjetiva, estos elementos  te permitirán evaluar las propuestas laborales que se te vayan presentando en tu proceso de búsqueda.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta1 === "no" && <p className="text-blue-800">
+                        Es importante saber qué es lo que quieres y para ello definimos tu empleo ideal actual objetivo con 12 variables y también de manera subjetiva, estos elementos  te permitirán evaluar las propuestas laborales que se te vayan presentando en tu proceso de búsqueda.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -167,7 +168,7 @@ export default function EmpleoPage() {
             {/* pregunta 2 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tienes un objetivo y un plan de búsqueda de empleo? *
                 </legend>
 
@@ -209,12 +210,12 @@ export default function EmpleoPage() {
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Una vez definido tu empleo ideal actual, lo que sigue es ponerte un objetivo claro en tiempo, qué y cómo vas a hacer para conseguirlo con un plan.  En el coaching de búsqueda de empleo te daré un plan de 14 días de preparación para que sepas todo lo que debes de considerar y hacerlo de ahí en adelante hasta ser contratado (a).
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta2 === "no" && <p className="text-blue-800">
+                        Una vez definido tu empleo ideal actual, lo que sigue es ponerte un objetivo claro en tiempo, qué y cómo vas a hacer para conseguirlo con un plan.  En el coaching de búsqueda de empleo te daré un plan de 14 días de preparación para que sepas todo lo que debes de considerar y hacerlo de ahí en adelante hasta ser contratado (a).
+                      </p>}
                 </div>
               </fieldset>
 
@@ -223,7 +224,7 @@ export default function EmpleoPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo usar tu networking (red de contactos) para buscar empleo? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -265,12 +266,12 @@ export default function EmpleoPage() {
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        La mejor fuente de  búsqueda de empleo es tu red de contactos pero si no la estás  usando o lo estás haciendo de manera ineficiente, no te dará  los resultados correctos.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta3 === "no" && <p className="text-blue-800">
+                        La mejor fuente de  búsqueda de empleo es tu red de contactos pero si no la estás  usando o lo estás haciendo de manera ineficiente, no te dará  los resultados correctos.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -279,7 +280,7 @@ export default function EmpleoPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes dónde buscar empleo? (diferentes fuentes, no sólo las bolsas de trabajo)? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -321,12 +322,12 @@ export default function EmpleoPage() {
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        La mayoría de las personas que buscan empleo únicamente consideran darse de alta en bolsas de trabajo y postularse a vacantes con un C.V. general,  sin poderle dar seguimiento y no se enfocan en otras fuentes más efectivas.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta4 === "no" && <p className="text-blue-800">
+                        La mayoría de las personas que buscan empleo únicamente consideran darse de alta en bolsas de trabajo y postularse a vacantes con un C.V. general,  sin poderle dar seguimiento y no se enfocan en otras fuentes más efectivas.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -335,7 +336,7 @@ export default function EmpleoPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Has hecho un estudio FODA personal y lo ocupas para vender tus fortalezas en tu currrículum y entrevista? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -376,22 +377,23 @@ export default function EmpleoPage() {
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si no has hecho un estudio FODA, te recomiendo que lo hagas para que  identifiques las fortalezas que venderás en tu C.V. (nunca en lista) y en tu entrevista laboral.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta5 === "no" && <p className="text-blue-800">
+                        Si no has hecho un estudio FODA, te recomiendo que lo hagas para que  identifiques las fortalezas que venderás en tu C.V. (nunca en lista) y en tu entrevista laboral.
+                      </p>}
                 </div>
               </fieldset>
             </div>
           </div>
           <div className="flex justify-center gap-5">
-            <button type="button" onClick={() => router.push("/cv")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
+            <button type="button" onClick={() => router.push("/entrevista")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
           </div>
         </div>
       </div>
     </form>
+    </div>
   )
 }
 

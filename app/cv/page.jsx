@@ -104,6 +104,8 @@ export default function CvPage() {
   }
 
   return (
+    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
+    
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
@@ -112,7 +114,7 @@ export default function CvPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -154,11 +156,11 @@ export default function CvPage() {
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta1 === "no" && <p className="text-blue-800">
+                        Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -168,7 +170,7 @@ export default function CvPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
 
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
                 </legend>
 
@@ -210,12 +212,12 @@ export default function CvPage() {
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta2 === "no" && <p className="text-blue-800">
+                        Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -224,7 +226,7 @@ export default function CvPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tu C.V. contiene tus mejores logros y fortalezas? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -266,12 +268,12 @@ export default function CvPage() {
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta3 === "no" && <p className="text-blue-800">
+                        Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -280,7 +282,7 @@ export default function CvPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -322,12 +324,12 @@ export default function CvPage() {
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta4 === "no" && <p className="text-blue-800">
+                        Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -336,7 +338,7 @@ export default function CvPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -378,11 +380,11 @@ export default function CvPage() {
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta5 === "no" && <p className="text-blue-800">
+                        Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -395,6 +397,7 @@ export default function CvPage() {
         </div>
       </div>
     </form>
+    </div>
   )
 }
 
