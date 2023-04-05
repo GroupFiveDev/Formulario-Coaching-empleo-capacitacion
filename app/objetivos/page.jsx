@@ -1,6 +1,8 @@
 'use client'
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import emailjs from 'emailjs-com';
+import puntuacion from "../grafica/puntuacion";
 
 export default function ObjetivosPage() {
 
@@ -10,6 +12,8 @@ export default function ObjetivosPage() {
   if (process.browser) {
     storage = JSON.parse(localStorage.getItem("form"))
   }
+
+  let amount = puntuacion()
 
   const [results, setResults] = useState({
     Pregunta1: "",
@@ -98,9 +102,25 @@ export default function ObjetivosPage() {
     }
   }, [])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     router.push("/grafica");
+    const templateParams = {
+      to: storage?.datos_personales.correo,
+      name: storage?.datos_personales.nombre_completo,
+      cv: amount?.cv,
+      entrevista: amount?.entrevista,
+      empleo: amount?.empleo,
+      linkedin: amount?.linkedin,
+      objetivos: amount?.objetivos,
+    }
+    emailjs.send("service_mt30tnq", "template_iu00azr", templateParams, "c-_sUDTDmZAJi6E_o")
+      .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function (error) {
+        console.log('FAILED...', error);
+      });
+
   }
 
   return (
