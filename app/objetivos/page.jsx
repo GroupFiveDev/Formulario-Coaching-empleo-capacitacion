@@ -133,7 +133,7 @@ export default function ObjetivosPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sientes que mantienes un equilibrio en tu vida? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -189,7 +189,7 @@ export default function ObjetivosPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
 
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tienes claro el camino para tu crecimiento profesional? *
                 </legend>
 
@@ -245,7 +245,7 @@ export default function ObjetivosPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Llevas a cabo tu vocación? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -301,7 +301,7 @@ export default function ObjetivosPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tienes objetivos claros para tus esferas de: Salud, Familia y  Vida Social? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -357,7 +357,7 @@ export default function ObjetivosPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tienes un objetivo claro de Trabajo? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">

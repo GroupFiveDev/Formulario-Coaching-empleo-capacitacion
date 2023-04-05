@@ -113,7 +113,7 @@ export default function EmpleoPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cuál es tu empleo ideal actual? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -168,7 +168,7 @@ export default function EmpleoPage() {
             {/* pregunta 2 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tienes un objetivo y un plan de búsqueda de empleo? *
                 </legend>
 
@@ -224,7 +224,7 @@ export default function EmpleoPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo usar tu networking (red de contactos) para buscar empleo? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -280,7 +280,7 @@ export default function EmpleoPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes dónde buscar empleo? (diferentes fuentes, no sólo las bolsas de trabajo)? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -336,7 +336,7 @@ export default function EmpleoPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Has hecho un estudio FODA personal y lo ocupas para vender tus fortalezas en tu currrículum y entrevista? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">

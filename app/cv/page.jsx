@@ -105,6 +105,7 @@ export default function CvPage() {
 
   return (
     <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
+    
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
@@ -113,7 +114,7 @@ export default function CvPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Consideras que tu C.V. te ayuda a vender lo mejor de ti? Es decir, te ayuda a conseguir entrevistas. *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -169,7 +170,7 @@ export default function CvPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
 
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tu C.V. consta de una cuartilla (dos, si tienes nivel gerencial o directivo)? *
                 </legend>
 
@@ -225,7 +226,7 @@ export default function CvPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Tu C.V. contiene tus mejores logros y fortalezas? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -281,7 +282,7 @@ export default function CvPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo adaptar tu C.V. a una vacante de tu interés? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -337,7 +338,7 @@ export default function CvPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes cómo redactar una carta de presentación que llame la atención de manera positiva a quien se la envíes? *
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">

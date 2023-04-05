@@ -100,7 +100,7 @@ export default function EntrevistaPage() {
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sabes qué debes hacer antes, durante y después de una entrevista laboral?
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -156,7 +156,7 @@ export default function EntrevistaPage() {
             <div className="mt-10 space-y-10">
               <fieldset>
 
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Logras mantenerte en el proceso de selección después de una entrevista?
                 </legend>
 
@@ -212,7 +212,7 @@ export default function EntrevistaPage() {
             {/* pregunta 3 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Sientes confianza al contestar las preguntas del reclutador?
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -268,7 +268,7 @@ export default function EntrevistaPage() {
             {/* pregunta 4 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Realizas el seguimiento correspondiente después de la entrevista?
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
@@ -324,7 +324,7 @@ export default function EntrevistaPage() {
             {/* pregunta 5 */}
             <div className="mt-10 space-y-10">
               <fieldset>
-                <legend className="text-sm font-semibold leading-6 text-gray-900">
+                <legend className="text-lg font-semibold leading-6 text-gray-900">
                   ¿Eres consciente de tus lenguajes verbal, paraverbal y corporal, durante la entrevista?
                 </legend>
                 <div className="mt-6 space-y-6 flex flex-col items-center">
