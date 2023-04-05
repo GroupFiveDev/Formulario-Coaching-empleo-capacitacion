@@ -127,7 +127,7 @@ export default function ObjetivosPage() {
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-1">Objetivos</h1>
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Objetivos</h1>
           <div className="border-gray-900/10 pb-12">
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
