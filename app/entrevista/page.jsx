@@ -142,11 +142,11 @@ export default function EntrevistaPage() {
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si no sabes qué hacer en alguno de estos tiempos,  en el coaching  de Preparación de entrevista laboral te explico 45 actividades  específicas que debes de llevar a cabo antes, durante y después;  tal vez, no estés llevando a cabo varias de ellas.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta1 === "no" && <p className="text-blue-800">
+                        Si no sabes qué hacer en alguno de estos tiempos,  en el coaching  de Preparación de entrevista laboral te explico 45 actividades  específicas que debes de llevar a cabo antes, durante y después;  tal vez, no estés llevando a cabo varias de ellas.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -198,12 +198,12 @@ export default function EntrevistaPage() {
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Es posible que estés teniendo errores en tus lenguajes, contestaste de manera inadecuada,   te  faltó venderte como el /la  mejor candidato (a) posible o alguna otra razón que no te estás percatando. Podemos saberlo a través de una simulación de entrevista.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta2 === "no" && <p className="text-blue-800">
+                        Es posible que estés teniendo errores en tus lenguajes, contestaste de manera inadecuada,   te  faltó venderte como el /la  mejor candidato (a) posible o alguna otra razón que no te estás percatando. Podemos saberlo a través de una simulación de entrevista.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -254,12 +254,12 @@ export default function EntrevistaPage() {
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si no tienes confianza, en el coaching de preparación te compartiré  un archivo con las  50 preguntas más comunes de una entrevista laboral para que las contestes todas, elijas las 10 más complicadas para ti y  trabajaremos con ellas en una parte de la sesión.  Además, te enseñaré a contestar de manera adecuada a cualquier pregunta que te hagan.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta3 === "no" && <p className="text-blue-800">
+                        Si no tienes confianza, en el coaching de preparación te compartiré  un archivo con las  50 preguntas más comunes de una entrevista laboral para que las contestes todas, elijas las 10 más complicadas para ti y  trabajaremos con ellas en una parte de la sesión.  Además, te enseñaré a contestar de manera adecuada a cualquier pregunta que te hagan.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -310,12 +310,12 @@ export default function EntrevistaPage() {
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Es importante que después de la entrevista le des seguimiento constante a los procesos en los que estés participando (de manera activa - proactiva) y no te esperes a que te llamen para darte alguna respuesta (eso es reactivo- pasivo).
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta4 === "no" && <p className="text-blue-800">
+                        Es importante que después de la entrevista le des seguimiento constante a los procesos en los que estés participando (de manera activa - proactiva) y no te esperes a que te llamen para darte alguna respuesta (eso es reactivo- pasivo).
+                      </p>}
                 </div>
               </fieldset>
 
@@ -366,11 +366,11 @@ export default function EntrevistaPage() {
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        En la entrevista laboral, no solamente es importante contestar de manera adecuada (lo que dices) sino cómo lo dices (calidad y cualidad de tu voz), los gestos que  haces con tu cara y la postura de tu cuerpo.  Es posible que si no los estás usando de manera consciente entonces estén jugando en tu contra.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta5 === "no" && <p className="text-blue-800">
+                        En la entrevista laboral, no solamente es importante contestar de manera adecuada (lo que dices) sino cómo lo dices (calidad y cualidad de tu voz), los gestos que  haces con tu cara y la postura de tu cuerpo.  Es posible que si no los estás usando de manera consciente entonces estén jugando en tu contra.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -378,7 +378,7 @@ export default function EntrevistaPage() {
 
           </div>
           <div className="flex justify-center gap-5">
-            <button type="button" onClick={() => router.push("/empleo")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
+            <button type="button" onClick={() => router.push("/cv")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
           </div>
         </div>

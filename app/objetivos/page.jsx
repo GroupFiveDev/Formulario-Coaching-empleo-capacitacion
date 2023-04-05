@@ -175,11 +175,11 @@ export default function ObjetivosPage() {
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta1 === "no" && <p className="text-gray-500">
-                        Si no tienes un equilibrio en tu vida, le estás dedicando demasiado tiempo a tu trabajo y no tienes tiempo para tu salud, estar contigo mismo (a), tu familia, tus amigos, tus actividades recreativas, etc. Puede ser  momento para darte una pausa, reflexionar sobre lo que estás haciendo y lo que quieres hacer.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta1 === "no" && <p className="text-blue-800">
+                        Si no tienes un equilibrio en tu vida, le estás dedicando demasiado tiempo a tu trabajo y no tienes tiempo para tu salud, estar contigo mismo (a), tu familia, tus amigos, tus actividades recreativas, etc. Puede ser  momento para darte una pausa, reflexionar sobre lo que estás haciendo y lo que quieres hacer.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -231,12 +231,12 @@ export default function ObjetivosPage() {
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta2 === "no" && <p className="text-gray-500">
-                        Si no sabes hacia dónde vas, entonces ¿cómo sabrás si ya llegaste o cuánto te falta? Es importante que definas  tu crecimiento profesional o laboral tan lejos como lo quieras llevar. Esta es una pregunta de entrevista ¿cómo te ves en cinco, 10 o 15 años? Deberías tener por lo menos una idea de qué contestar.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta2 === "no" && <p className="text-blue-800">
+                        Si no sabes hacia dónde vas, entonces ¿cómo sabrás si ya llegaste o cuánto te falta? Es importante que definas  tu crecimiento profesional o laboral tan lejos como lo quieras llevar. Esta es una pregunta de entrevista ¿cómo te ves en cinco, 10 o 15 años? Deberías tener por lo menos una idea de qué contestar.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -287,12 +287,12 @@ export default function ObjetivosPage() {
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta3 === "no" && <p className="text-gray-500">
-                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta3 === "no" && <p className="text-blue-800">
+                        Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -343,12 +343,12 @@ export default function ObjetivosPage() {
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta4 === "no" && <p className="text-gray-500">
-                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.
-                      </p>}
 
                     </div>
                   </div>
+                      {results.Pregunta4 === "no" && <p className="text-blue-800">
+                        Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.
+                      </p>}
                 </div>
               </fieldset>
 
@@ -399,11 +399,11 @@ export default function ObjetivosPage() {
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
                         No
                       </label>
-                      {results.Pregunta5 === "no" && <p className="text-gray-500">
-                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc.
-                      </p>}
                     </div>
                   </div>
+                      {results.Pregunta5 === "no" && <p className="text-blue-800">
+                        Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc.
+                      </p>}
                 </div>
               </fieldset>
 

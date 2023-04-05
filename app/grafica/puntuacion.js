@@ -15,7 +15,7 @@ export default function puntuacion() {
             return acumulador;
           }
         },
-        0
+        1
       ),
       entrevista: Object.values(storage.entrevista.results).reduce(
         (acumulador, valorActual) => {
@@ -25,7 +25,7 @@ export default function puntuacion() {
             return acumulador;
           }
         },
-        0
+        1
       ),
       empleo: Object.values(storage.empleo.results).reduce(
         (acumulador, valorActual) => {
@@ -35,7 +35,7 @@ export default function puntuacion() {
             return acumulador;
           }
         },
-        0
+        1
       ),
       linkedin: Object.values(storage.linkedin.results).reduce(
         (acumulador, valorActual) => {
@@ -45,7 +45,7 @@ export default function puntuacion() {
             return acumulador;
           }
         },
-        0
+        1
       ),
       objetivos: Object.values(storage.objetivos.results).reduce(
         (acumulador, valorActual) => {
@@ -55,7 +55,7 @@ export default function puntuacion() {
             return acumulador;
           }
         },
-        0
+        1
       ),
     };
   }
