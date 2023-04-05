@@ -10,7 +10,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-pink-200">
                         <h1 className="text-2xl text-red-600">1) Coaching de C.V. creativo y de alto impacto. 3 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount && amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Te puedo enseñar cómo evaluar una vacante de tu interés antes de postularte, cómo adaptar tu C.V.a dicha vacante y cómo redactar una carta depresentación interesante que complemente tu postulación.</h3>
                         <h3>-Te enseñaré a redactar tus logros demanera que estén incluidas tus fortalezas y puedas venderte mucho mejor.</h3>
@@ -46,7 +46,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-orange-200">
                         <h1 className="text-2xl text-red-600">2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount && amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Sabrás cómo debes prepararte para una entrevista laboral (antes, durante y después), con la finalidad de aumentar tu confianza frente al reclutador.</h3>
                         <h3>-Te daré tips de qué elementos debes cuidar en todo momento: tus lenguajes y tu imagen personal.</h3>
@@ -70,7 +70,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-orange-200">
                         <h1 className="text-2xl text-red-600">2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Sabrás cómo debes prepararte para una entrevista laboral (antes, durante y después), con la finalidad de aumentar tu confianza frente al reclutador.</h3>
                         <h3>-Te daré tips de qué elementos debes cuidar en todo momento: tus lenguajes y tu imagen personal.</h3>
@@ -95,7 +95,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <br />
                         <h1 className="text-2xl text-red-600">2) Coaching de simulación de entrevista laboral. 1.5 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Haremos una simulación de entrevista, por lo tanto, debes estar vestido(a) como si fuera una entrevista laboral real (aún sea virtual).</h3>
                         <h3>-Te daré retroalimentación de: tus respuestas, tu imagen (de acuerdo a tu perfil), lenguajes (verbal, no verbal y paraverbal), tu pitch de presentación, errores, etc.</h3>
@@ -130,7 +130,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-yellow-200">
                         <h1 className="text-2xl text-red-600">3) Coaching de búsqueda de empleo. 3 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Definirás tu empleo ideal actual objetivo (12 variables) y subjetivo para que enfoques tu búsqueda y puedas evaluar cualquier vacante antes de postularte.</h3>
                         <h3>-Conocerás la efectividad de las fuentes de empleo.</h3>
@@ -169,7 +169,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-green-200">
                         <h1 className="text-2xl text-red-600">4) Coaching de uso de Linkedin para buscar trabajo. 1.5 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Este servicio es para que destaques tu perfil y lo hagas más visible tanto para el buscador interno de Linkedin como para los reclutadores.</h3>
                         <h3>-Revisaremos tu perfil de Linkedin y te iré indicando cómo mejorarlo.</h3>
@@ -203,7 +203,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                     <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl mx-20 p-5 flex flex-col items-center font-bold hover:bg-blue-200">
                         <h1 className="text-2xl text-red-600">5) Coaching de proyecto de vida y carrera. 3 horas.</h1>
                         <br />
-                        <h1 className="text-lg text-blue-800">Tienes {amount} puntos de acuerdo al diagnóstico.</h1>
+                        <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
                         <br />
                         <h3>-Esta opción es para hacer un mapa mental que te permita tener una visión global de tu vida.</h3>
                         <h3>-Podrás definir dónde estás el día de hoy en todas las esferas de tu vida: salud, social, familia y trabajo/vocación.</h3>

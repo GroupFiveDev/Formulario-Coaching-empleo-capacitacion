@@ -24,7 +24,7 @@ const Chart = () => {
     labels: labels,
     datasets: [{
       label: 'Puntajes',
-      data: [amount?.cv, amount?.entrevista, amount?.empleo, amount?.linkedin, amount?.objetivos, 100],
+      data: [amount?.cv -1, amount?.entrevista -1, amount?.empleo -1, amount?.linkedin -1, amount?.objetivos -1, 100],
       backgroundColor: [
         'rgba(255, 99, 132, 0.6)',
         'rgba(255, 159, 64, 0.6)',
