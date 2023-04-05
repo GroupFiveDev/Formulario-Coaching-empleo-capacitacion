@@ -104,6 +104,7 @@ export default function EmpleoPage() {
   }
 
   return (
+    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
     <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
@@ -392,6 +393,7 @@ export default function EmpleoPage() {
         </div>
       </div>
     </form>
+    </div>
   )
 }
 
