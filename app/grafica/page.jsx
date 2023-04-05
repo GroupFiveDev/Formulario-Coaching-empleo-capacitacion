@@ -1,6 +1,7 @@
 'use client'
 import Chart from "./Chart"
 import Respuesta from "./Respuesta";
+import puntuacion from "./puntuacion";
 
 const Grafica = () => {
 
@@ -9,46 +10,7 @@ const Grafica = () => {
     storage = JSON.parse(localStorage.getItem("form"))
   }
 
-  let amount;
-  if (storage) {
-    amount = {
-      cv: Object.values(storage.cv.results).reduce((acumulador, valorActual) => {
-        if (valorActual === "si") {
-          return acumulador + 20;
-        } else {
-          return acumulador;
-        }
-      }, 0),
-      entrevista: Object.values(storage.entrevista.results).reduce((acumulador, valorActual) => {
-        if (valorActual === "si") {
-          return acumulador + 20;
-        } else {
-          return acumulador;
-        }
-      }, 0),
-      empleo: Object.values(storage.empleo.results).reduce((acumulador, valorActual) => {
-        if (valorActual === "si") {
-          return acumulador + 20;
-        } else {
-          return acumulador;
-        }
-      }, 0),
-      linkedin: Object.values(storage.linkedin.results).reduce((acumulador, valorActual) => {
-        if (valorActual === "si") {
-          return acumulador + 20;
-        } else {
-          return acumulador;
-        }
-      }, 0),
-      objetivos: Object.values(storage.objetivos.results).reduce((acumulador, valorActual) => {
-        if (valorActual === "si") {
-          return acumulador + 20;
-        } else {
-          return acumulador;
-        }
-      }, 0),
-    }
-  }
+  let amount = puntuacion()
 
   return (
     <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100">
