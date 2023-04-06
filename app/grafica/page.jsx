@@ -15,7 +15,7 @@ const Grafica = () => {
 
   return (
     <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100">
-      <Image width='100' height='100' src="/logo2.png" alt="logo" className="position: relative top-0 left-0"/>
+      <Image width='100' height='100' src="/logo2.png" alt="logo" className="position: absolute top-0 left-0"/>
       <div className="flex flex-col items-center">
         <h1 className="text-red-600 text-3xl font-bold">RESULTADOS</h1>
         <h1 className="text-blue-800 font-bold">Diagnóstico inicial de búsqueda de empleo.</h1>
