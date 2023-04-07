@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image'
 
 export default function HomePage() {
   const router = useRouter()
@@ -128,10 +129,15 @@ export default function HomePage() {
   })
 
   return (
-    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
-      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-red-600 md:text-5xl lg:text-1"> Diagnóstico inicial de búsqueda de empleo.</h1>
+    <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10 ">
+      <div className="flex items-center ">
+      <Image width='100' height='100' src="/logo2.png" alt="logo" className="top-0 left-0"/>
+      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-red-600 md:text-5xl lg:text-1 "> Diagnóstico inicial de búsqueda de empleo.
+      </h1>
+      </div>
       <p className="mb-6 text-lg font-normal text-blue-800 lg:text-xl">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</p>
       <form onSubmit={handleSubmit}>
+
         <div className="grid gap-6 mb-6 md:grid-cols-2">
 
           {/* correo */}

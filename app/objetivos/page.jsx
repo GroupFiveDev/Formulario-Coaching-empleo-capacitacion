@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import emailjs from 'emailjs-com';
 import puntuacion from "../grafica/puntuacion";
+import Image from 'next/image'
 
 export default function ObjetivosPage() {
 
@@ -126,9 +127,12 @@ export default function ObjetivosPage() {
   return (
     <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10">
     <form onSubmit={handleSubmit}>
+    <Image width='100' height='100' src="/logo2.png" alt="logo" className="position: fixed top-0 left-0"/>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Objetivos</h1>
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Proyecto
+
+de vida y carrera</h1>
           <div className="border-gray-900/10 pb-12">
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
