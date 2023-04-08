@@ -203,7 +203,7 @@ export default function HomePage() {
 
           {/* Cómo_te_sientes_en_esta_búsqueda_de_empleo */}
           <div>
-            <label htmlFor="En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente" className="block mb-2 text-lg font-medium text-gray-900">¿Cómo te sientes en esta búsqueda de empleo?  Puedes elegir varias opciones. *</label>
+            <label htmlFor="Cómo_te_sientes_en_esta_búsqueda_de_empleo" className="block mb-2 text-lg font-medium text-gray-900">¿Cómo te sientes en esta búsqueda de empleo?  Puedes elegir varias opciones. *</label>
 
             {/* Motivado */}
             <div className="flex items-center">
