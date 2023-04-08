@@ -6,8 +6,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    amount && amount <= 80 ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-pink-200">
+                    amount && amount - 1 <= 80 ?
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">1) Coaching de C.V. creativo y de alto impacto. 3 horas.</h1>
                         <br />
                         <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
@@ -29,7 +29,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-$1,000 M.N.</h3>
                     </div>
                     :
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-pink-200">
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">C.V. creativo y de alto impacto.</h1>
                         <h1 className="text-lg text-blue-800">Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -43,7 +43,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
             <div>
                 {
                     entrevista6 && entrevista6 === "no" ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-orange-200">
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
                         <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
@@ -66,8 +66,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-$1,000 M.N.</h3>
                     </div>
                     :
-                    amount && amount <= 60 ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-orange-200">
+                    amount && amount - 1 <= 60 ?
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">2) Coaching de preparación de entrevista laboral. 3 horas.</h1>
                         <br />
                         <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
@@ -90,8 +90,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-$1,000 M.N.</h3>
                     </div>
                     :
-                    (amount && amount) == 80 ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-orange-200">
+                    (amount && amount - 1) == 80 ?
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <br />
                         <h1 className="text-2xl text-red-600">2) Coaching de simulación de entrevista laboral. 1.5 horas.</h1>
                         <br />
@@ -113,7 +113,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-Bilingüe $800 M.N.</h3>
                     </div>    
                     :
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-orange-200">
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">Coaching de simulación de entrevista laboral.</h1>
                         <h1 className="text-lg text-blue-800">Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -126,8 +126,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    (amount && amount <= 80) ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-yellow-200">
+                    (amount && amount - 1 <= 80) ?
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">3) Coaching de búsqueda de empleo. 3 horas.</h1>
                         <br />
                         <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
@@ -152,7 +152,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-$2,000 M.N.</h3>
                     </div>
                     :
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-yellow-200">
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">Coaching de búsqueda de empleo.</h1>
                         <h1 className="text-lg text-blue-800">Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -165,8 +165,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    (amount && amount <= 80) ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-green-200">
+                    (amount && amount - 1 <= 80) ?
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">4) Coaching de uso de Linkedin para buscar trabajo. 1.5 horas.</h1>
                         <br />
                         <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
@@ -186,7 +186,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-$600 M.N.</h3>
                     </div>
                     :
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-green-200">
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">Coaching de uso de Linkedin para buscar trabajo.</h1>
                         <h1 className="text-lg text-blue-800">Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
@@ -199,8 +199,8 @@ const Respuesta = ({amount, category, entrevista6}) => {
         return(
             <div>
                 {
-                    (amount && amount <= 80) ?
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl mx-20 p-5 flex flex-col items-center font-bold hover:bg-blue-200">
+                    (amount && amount - 1 <= 80) ?
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">5) Coaching de proyecto de vida y carrera. 3 horas.</h1>
                         <br />
                         <h1 className="text-lg text-blue-800">Tienes {amount -1} puntos de acuerdo al diagnóstico.</h1>
@@ -221,7 +221,7 @@ const Respuesta = ({amount, category, entrevista6}) => {
                         <h3>-$1000 M.N.</h3>
                     </div>
                     :
-                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl mx-20 p-5 flex flex-col items-center font-bold hover:bg-blue-200">
+                    <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl mx-20 p-5 flex flex-col items-center font-bold hover:bg-gray-300">
                         <h1 className="text-2xl text-red-600">Coaching de proyecto de vida y carrera.</h1>
                         <h1 className="text-lg text-blue-800">Obtuviste 100 puntos ¡Felicidades!, por lo tanto, no hay propuestas para trabajar en este tema.</h1>
                     </div>
