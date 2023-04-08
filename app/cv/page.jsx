@@ -137,7 +137,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="pregunta1a" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -157,7 +157,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
                     </div>
                   </div>
@@ -193,7 +193,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -213,7 +213,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -249,7 +249,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -269,7 +269,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -305,7 +305,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -325,7 +325,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -361,7 +361,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -381,7 +381,7 @@ y de alto impacto</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
                     </div>
                   </div>

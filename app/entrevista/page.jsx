@@ -98,9 +98,7 @@ export default function EntrevistaPage() {
           <Image width='100' height='100' src="/logo2.png" alt="logo" className="position: fixed top-0 left-0"/>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Preparación de
-
-entrevista laboral</h1>
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Entrevista laboral</h1>
           <div className="border-gray-900/10 pb-12">
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
@@ -125,7 +123,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="pregunta1a" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -145,7 +143,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
                     </div>
                   </div>
@@ -181,7 +179,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -201,7 +199,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -237,7 +235,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -257,7 +255,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -293,7 +291,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -313,7 +311,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -349,7 +347,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -369,7 +367,7 @@ entrevista laboral</h1>
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
                     </div>
                   </div>
