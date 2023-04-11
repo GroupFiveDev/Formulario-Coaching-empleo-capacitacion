@@ -109,11 +109,11 @@ export default function ObjetivosPage() {
     const templateParams = {
       to: storage?.datos_personales.correo,
       name: storage?.datos_personales.nombre_completo,
-      cv: amount?.cv,
-      entrevista: amount?.entrevista,
-      empleo: amount?.empleo,
-      linkedin: amount?.linkedin,
-      objetivos: amount?.objetivos,
+      cv: amount?.cv -1,
+      entrevista: amount?.entrevista -1,
+      empleo: amount?.empleo -1,
+      linkedin: amount?.linkedin -1,
+      objetivos: amount?.objetivos -1,
     }
     emailjs.send("service_mt30tnq", "template_iu00azr", templateParams, "c-_sUDTDmZAJi6E_o")
       .then(function (response) {
