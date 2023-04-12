@@ -4,6 +4,7 @@ import Chart from "./Chart"
 import Respuesta from "./Respuesta";
 import puntuacion from "./puntuacion";
 import Image from 'next/image'
+import { showMessage } from "../showMessage";
 
 const Grafica = () => {
 
@@ -15,6 +16,8 @@ const Grafica = () => {
   let amount = puntuacion()
 
   useEffect(() => {
+
+    showMessage("El formulario se completó con éxito. Revisa tu casilla de correo electrónico para mas información.")
 
     return () => {
       const obj = {
