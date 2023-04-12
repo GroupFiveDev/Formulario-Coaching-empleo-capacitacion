@@ -67,7 +67,7 @@ export default function HomePage() {
         correo: "",
         nombre_completo: "",
         numero_telefonico: "",
-        ciudad_pais:"",
+        ciudad_pais: "",
         fecha_de_nacimiento: "",
         edad: "",
         Qué_puesto_o_empleo_buscas: "",
@@ -123,18 +123,18 @@ export default function HomePage() {
         }
       }
     }
-    // if (process.browser) {
-    if (!storage)
-      localStorage.setItem("form", JSON.stringify(obj))
-    // }
+    if (process.browser) {
+      if (!storage)
+        localStorage.setItem("form", JSON.stringify(obj))
+    }
   })
 
   return (
     <div className="h-full bg-gradient-to-tr from-gray-500 to-gray-100 p-10 ">
       <div className="flex items-center ">
-      <Image width='100' height='100' src="/logo2.png" alt="logo" className="top-0 left-0"/>
-      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-red-600 md:text-5xl lg:text-1 "> Diagnóstico inicial de búsqueda de empleo.
-      </h1>
+        <Image width='100' height='100' src="/logo2.png" alt="logo" className="top-0 left-0" />
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-red-600 md:text-5xl lg:text-1 "> Diagnóstico inicial de búsqueda de empleo.
+        </h1>
       </div>
       <p className="mb-6 text-lg font-normal text-blue-800 lg:text-xl">Por  favor  contesta con la mayor honestidad posible sobre tu situación en este momento para poder hacer el mejor diagnóstico posible y darte propuestas solamente con  los servicios que  realmente necesitas. De antemano gracias.</p>
       <form onSubmit={handleSubmit}>
@@ -162,7 +162,7 @@ export default function HomePage() {
           {/* ciudad-país */}
           <div>
             <label htmlFor="ciudad_país" className="block mb-2 text-lg font-medium text-gray-900">Ciudad y país. *</label>
-            <input onChange={handleChange} type="text" id="ciudad_pais" name="ciudad_pais" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Ciudad y país." pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" defaultValue={storage?.datos_personales.numero_telefonico} required />
+            <input onChange={handleChange} type="text" id="ciudad_pais" name="ciudad_pais" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Ciudad y país." defaultValue={storage?.datos_personales.ciudad_pais} required />
           </div>
 
           {/* fecha_de_nacimiento */}
