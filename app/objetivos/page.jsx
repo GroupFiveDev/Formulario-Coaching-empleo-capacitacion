@@ -130,7 +130,9 @@ export default function ObjetivosPage() {
     <Image width='100' height='100' src="/logo2.png" alt="logo" className="position: fixed top-0 left-0"/>
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center border-gray-900/10">
-          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Objetivos</h1>
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-blue-800 md:text-5xl lg:text-1">Proyecto
+
+de vida y carrera</h1>
           <div className="border-gray-900/10 pb-12">
             {/* pregunta 1 */}
             <div className="mt-10 space-y-10">
@@ -155,7 +157,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="pregunta1a" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -175,7 +177,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="pregunta1b" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
                     </div>
                   </div>
@@ -211,7 +213,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -231,7 +233,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta2" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -267,7 +269,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -287,7 +289,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta3" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -323,7 +325,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -343,7 +345,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta4" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
 
                     </div>
@@ -379,7 +381,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        Si
+                        Sí.
                       </label>
 
                     </div>
@@ -399,7 +401,7 @@ export default function ObjetivosPage() {
                     </div>
                     <div className="text-sm leading-6">
                       <label htmlFor="Pregunta5" className="font-medium text-gray-900">
-                        No
+                        No.
                       </label>
                     </div>
                   </div>
@@ -414,7 +416,7 @@ export default function ObjetivosPage() {
           </div>
 
           <div className="flex justify-center gap-5">
-            <button type="button" onClick={() => router.push("/linkedin")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button>
+            {/* <button type="button" onClick={() => router.push("/linkedin")} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Atras</button> */}
             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Siguiente</button>
           </div>
         </div>
