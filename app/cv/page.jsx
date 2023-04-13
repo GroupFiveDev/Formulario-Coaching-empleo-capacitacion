@@ -38,6 +38,7 @@ export default function CvPage() {
         correo: "",
         nombre_completo: "",
         numero_telefonico: "",
+        ciudad_pais: "",
         fecha_de_nacimiento: "",
         edad: "",
         Qué_puesto_o_empleo_buscas: "",
