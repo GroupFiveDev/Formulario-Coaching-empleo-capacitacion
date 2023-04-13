@@ -686,10 +686,6 @@ select {
   visibility: visible;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -706,6 +702,10 @@ select {
   top: 0px;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
@@ -714,6 +714,31 @@ select {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-40 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mb-2 {
@@ -1085,24 +1110,16 @@ select {
   }
 }
 
-@media (min-width: 640px) {
-  .sm\:w-auto {
-    width: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-
 @media (min-width: 1024px) {
+  .lg\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .lg\:w-10 {
+    width: 2.5rem;
+  }
+
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
