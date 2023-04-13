@@ -694,10 +694,6 @@ select {
   position: relative;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -706,43 +702,9 @@ select {
   top: 0px;
 }
 
-.m-1 {
-  margin: 0.25rem;
-}
-
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
-.mx-40 {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .mb-2 {
@@ -1118,10 +1080,6 @@ select {
   .lg\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
-  }
-
-  .lg\:w-10 {
-    width: 2.5rem;
   }
 
   .lg\:text-xl {
