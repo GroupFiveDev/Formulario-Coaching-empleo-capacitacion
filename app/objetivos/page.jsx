@@ -44,6 +44,7 @@ export default function ObjetivosPage() {
           correo: "",
           nombre_completo: "",
           numero_telefonico: "",
+          ciudad_pais: "",
           fecha_de_nacimiento: "",
           edad: "",
           Qué_puesto_o_empleo_buscas: "",
@@ -593,6 +594,16 @@ export default function ObjetivosPage() {
     const templateParams = {
       to: storage?.datos_personales.correo,
       name: storage?.datos_personales.nombre_completo,
+      numero: storage?.datos_personales.numero_telefonico,
+      fecha: storage?.datos_personales.fecha_de_nacimiento,
+      ciudad: storage?.datos_personales.ciudad_pais,
+      edad: storage?.datos_personales.edad,
+      puesto: storage?.datos_personales.Qué_puesto_o_empleo_buscas,
+      area: storage?.datos_personales.En_qué_tipo_área_o_departamentos_te_interesa_trabajar,
+      tipoEmpresa: storage?.datos_personales.En_qué_tipo_de__empresa_te_ves_desarrollándote_profesionalmente,
+      comoTeSientes: storage?.datos_personales.Cómo_te_sientes_en_esta_búsqueda_de_empleo,
+      queBuscas: storage?.datos_personales.Qué_buscas_en_un_empleo,
+      CuantoTiempo: storage?.datos_personales.Cuánto_tiempo_llevas_desempleado,
       cv: amount?.cv,
       entrevista: amount?.entrevista,
       empleo: amount?.empleo,
@@ -604,7 +615,7 @@ export default function ObjetivosPage() {
       respuestaLinkedin: ReactDOMServer.renderToString(respuestaLinkedin),
       respuestaObjetivos: ReactDOMServer.renderToString(respuestaObjetivos),
     }
-    emailjs.send("service_ziz6m6q", "template_fxj35gb", templateParams, "rAiH6ipyTPFl38SzH")
+    emailjs.send("service_b08no5e", "template_fxlduy5", templateParams, "ifYPF5U78bYaqtaSZ")
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
       }, function (error) {
