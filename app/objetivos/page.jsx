@@ -5,7 +5,6 @@ import emailjs from 'emailjs-com';
 import puntuacion from "../grafica/puntuacion";
 import Image from 'next/image'
 import ReactDOMServer from 'react-dom/server';
-import Image from 'next/image'
 
 export default function ObjetivosPage() {
 
