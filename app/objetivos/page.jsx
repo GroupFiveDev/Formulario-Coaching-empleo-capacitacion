@@ -640,7 +640,7 @@ export default function ObjetivosPage() {
       objetivo4: storage?.objetivos.results.Pregunta4,
       objetivo5: storage?.objetivos.results.Pregunta5,
     }
-    emailjs.send("service_b08no5e", "template_fxlduy5", templateParams, "ifYPF5U78bYaqtaSZ")
+    emailjs.send("service_usbn8vm", "template_ik5irbb", templateParams, "VfutMzDccQFtk3V2C")
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
       }, function (error) {
