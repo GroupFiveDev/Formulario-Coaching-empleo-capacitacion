@@ -9,7 +9,7 @@ export default function puntuacion() {
     amount = {
       cv: Object.values(storage.cv.results).reduce(
         (acumulador, valorActual) => {
-          if (valorActual === "si") {
+          if (valorActual === "Sí.") {
             return acumulador + 20;
           } else {
             return acumulador;
@@ -19,7 +19,7 @@ export default function puntuacion() {
       ),
       entrevista: Object.values(storage.entrevista.results).reduce(
         (acumulador, valorActual) => {
-          if (valorActual === "si") {
+          if (valorActual === "Sí.") {
             return acumulador + 20;
           } else {
             return acumulador;
@@ -29,7 +29,7 @@ export default function puntuacion() {
       ),
       empleo: Object.values(storage.empleo.results).reduce(
         (acumulador, valorActual) => {
-          if (valorActual === "si") {
+          if (valorActual === "Sí.") {
             return acumulador + 20;
           } else {
             return acumulador;
@@ -39,7 +39,7 @@ export default function puntuacion() {
       ),
       linkedin: Object.values(storage.linkedin.results).reduce(
         (acumulador, valorActual) => {
-          if (valorActual === "si") {
+          if (valorActual === "Sí.") {
             return acumulador + 20;
           } else {
             return acumulador;
@@ -49,7 +49,7 @@ export default function puntuacion() {
       ),
       objetivos: Object.values(storage.objetivos.results).reduce(
         (acumulador, valorActual) => {
-          if (valorActual === "si") {
+          if (valorActual === "Sí.") {
             return acumulador + 20;
           } else {
             return acumulador;

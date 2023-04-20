@@ -42,7 +42,7 @@ const Respuesta = ({ amount, category, entrevista6 }) => {
         return (
             <div>
                 {
-                    entrevista6 && entrevista6 === "no" ?
+                    entrevista6 && entrevista6 === "No." ?
                         <div className="bg-white border-2 shadow-md shadow-black border-black rounded-xl my-10 p-5 flex flex-col items-start font-bold hover:bg-gray-300 lg:mx-20">
                             <h1 className="text-2xl text-red-600">Coaching de preparación de entrevista laboral. 3 horas.</h1>
                             <br />

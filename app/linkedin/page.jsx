@@ -127,9 +127,9 @@ export default function LinkedinPage() {
                           id="Pregunta1A"
                           name="Pregunta1"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta1 === "si" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta1 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -147,9 +147,9 @@ export default function LinkedinPage() {
                           id="pregunta1B"
                           name="Pregunta1"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta1 === "no" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta1 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -160,7 +160,7 @@ export default function LinkedinPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta1 === "no" && <p className="text-blue-800">
+                    {results.Pregunta1 === "No." && <p className="text-blue-800">
                       Hay ciertos perfiles profesionales (operativos o algunos técnicos) para los que no es necesario tener un perfil de Linkedin pero si  el tuyo sí lo es y no  lo tienes, considera abrir uno.
 
                     </p>}
@@ -184,9 +184,9 @@ export default function LinkedinPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta2 === "si" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta2 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -204,9 +204,9 @@ export default function LinkedinPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta2 === "no" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta2 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -218,7 +218,7 @@ export default function LinkedinPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta2 === "no" && <p className="text-blue-800">
+                    {results.Pregunta2 === "No." && <p className="text-blue-800">
                       No solamente necesitas tener un perfil que te venda y esté actualizado (con tu foto e información). Normalmente, después de haber  trabajado con tu C.V. ya es más  fácil que utilices tu perfil y tus logros bien redactados para mejorar tu Linkedin.
                     </p>}
                   </div>
@@ -240,9 +240,9 @@ export default function LinkedinPage() {
                           id="Pregunta3A"
                           name="Pregunta3"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta3 === "si" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta3 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -260,9 +260,9 @@ export default function LinkedinPage() {
                           id="Pregunta3B"
                           name="Pregunta3"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta3 === "no" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta3 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -274,7 +274,7 @@ export default function LinkedinPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta3 === "no" && <p className="text-blue-800">
+                    {results.Pregunta3 === "No." && <p className="text-blue-800">
                       Si no revisas tu perfil, no publicas, no contactas con nadie, de nada sirve que lo tengas actualizado. Es como tener una herramienta guardada y no ocuparla.
 
                     </p>}
@@ -297,9 +297,9 @@ export default function LinkedinPage() {
                           id="Pregunta4A"
                           name="Pregunta4"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta4 === "si" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta4 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -317,9 +317,9 @@ export default function LinkedinPage() {
                           id="Pregunta4B"
                           name="Pregunta4"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta4 === "no" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta4 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -331,7 +331,7 @@ export default function LinkedinPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta4 === "no" && <p className="text-blue-800">
+                    {results.Pregunta4 === "No." && <p className="text-blue-800">
                       Si no contactas de manera deliberada con personas que te ayuden a conseguir el empleo que quieres y no estás incrementando tu red, entonces no estás ocupando tu perfil de manera adecuada para cumplir  tu objetivo, debes tener una actitud más activa frente a tu búsqueda de empleo.
 
                     </p>}
@@ -354,9 +354,9 @@ export default function LinkedinPage() {
                           id="Pregunta5A"
                           name="Pregunta5"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta5 === "si" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta5 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -374,9 +374,9 @@ export default function LinkedinPage() {
                           id="Pregunta5B"
                           name="Pregunta5"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.linkedin.results.Pregunta5 === "no" ? true : ""}
+                          defaultChecked={storage?.linkedin.results.Pregunta5 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -387,7 +387,7 @@ export default function LinkedinPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta5 === "no" && <p className="text-blue-800">
+                    {results.Pregunta5 === "No." && <p className="text-blue-800">
                       Si no sabes qué debes hacer para estar más visible  para  los reclutadores y/ o lo sabes pero no lo estás  haciendo,  ahí tienes una gran área de oportunidad.
                     </p>}
                   </div>
