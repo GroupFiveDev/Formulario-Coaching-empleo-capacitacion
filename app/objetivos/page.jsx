@@ -113,51 +113,51 @@ export default function ObjetivosPage() {
       amount.cv - 1 <= 80 ?
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-            <strong><span style={{ color: "red", fontSize: "20px" }}>
+            <strong><span style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de C.V. creativo y de alto impacto. 3 horas.</span></strong>
             <p style={{ margin: "0" }}>
-              <span style={{ fontSize: "14px" }}>
+              <strong><span style={{ fontSize: "14px" }}>
                 Tienes {amount.cv - 1} puntos de acuerdo al diagnóstico.
-              </span>
+              </span></strong>
             </p>
             <div>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Te puedo enseñar cómo evaluar una vacante de tu interés antes de postularte, cómo adaptar tu C.V. a dicha vacante y cómo redactar una carta de presentación interesante que complemente tu postulación.
-              </h1>
-              <h1 style={{ fontSize: "15px" }}>
+              </p>
+              <p style={{ fontSize: "15px" }}>
                 -Te enseñaré a redactar tus logros de manera que estén incluidas tus fortalezas y puedas venderte mucho mejor.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p>
+              <p style={{ fontSize: "15px" }}>
                 -Te servirá la información de tu C.V. para actualizar tu perfil de Linkedin y bolsas en las que estés registrado(a).
-              </h1 >
+              </p>
             </div >
 
             <div style={{ marginTop: "20px" }}>
-              <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+              <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
               ><span>
                   Incluye
                 </span>
                 <span>:</span>
               </span></strong>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de 3 horas. Virtual (Google Meet o Jitsi).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Tres revisiones de tu C.V. (la primera antes de la sesión y dos posteriores).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Dos revisiones de tu carta.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Una revisión a tu vacante.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Una revisión de tu perfil de Linkedin.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
               <strong>
-                <span style={{ color: "#336eff", fontSize: "20px" }}>
+                <span style={{ color: "#0b3062", fontSize: "20px" }}>
                   Valor:
                 </span>
               </strong >
@@ -170,7 +170,7 @@ export default function ObjetivosPage() {
         :
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1", }}>
-            <h1 style={{ color: "red", fontSize: "20px" }}>
+            <h1 style={{ color: "#700812", fontSize: "20px" }}>
               C.V. creativo y de alto impacto.
             </h1>
             <h1 style={{ fontSize: "17px" }}>
@@ -181,57 +181,57 @@ export default function ObjetivosPage() {
         </html>)
 
     const respuestaEntrevista = (
-      entrevista6 === "no" ?
+      entrevista6 === "No." ?
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-            <strong><span style={{ color: "red", fontSize: "20px" }}>
+            <strong><span style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de preparación de entrevista laboral. 3 horas.</span></strong>
             <p style={{ margin: "0" }}>
-              <span style={{ fontSize: "14px" }}>
+              <strong><span style={{ fontSize: "14px" }}>
                 Tienes {amount.entrevista - 1} puntos de acuerdo al diagnóstico.
-              </span>
+              </span></strong>
             </p>
             <div>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Sabrás cómo debes prepararte para una entrevista laboral (antes, durante y después), con la finalidad de aumentar tu confianza frente al reclutador.
-              </h1>
-              <h1 style={{ fontSize: "15px" }}>
+              </p>
+              <p style={{ fontSize: "15px" }}>
                 -Te daré tips de qué elementos debes cuidar en todo momento: tus lenguajes y tu imagen personal.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Antes de nuestra sesión, responderás por escrito las 50 preguntas más comunes en una entrevista y elegirás las 10 que te cuesten más trabajo para enfocarnos en ellas.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Aprenderás cómo contestar de manera adecuada para venderte mejor e incrementar tus posibilidades de ser contratado (a).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -También realizarás tu pitch para presentarte de manera profesional.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Despejaré cualquier duda que tengas de tus previas experiencias.
-              </h1 >
+              </p >
             </div >
 
             <div style={{ marginTop: "20px" }}>
-              <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+              <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
               ><span>
                   Incluye
                 </span>
                 <span>:</span>
               </span></strong>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de 3 horas. Virtual (Google Meet o Jitsi).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Formato de autoevaluación de entrevistas.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Archivo con las 50 preguntas más comunes en una entrevista laboral.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
               <strong>
-                <span style={{ color: "#336eff", fontSize: "20px" }}>
+                <span style={{ color: "#0b3062", fontSize: "20px" }}>
                   Valor:
                 </span>
               </strong >
@@ -245,53 +245,53 @@ export default function ObjetivosPage() {
         amount.entrevista - 1 <= 60 ?
           <html>
             <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-              <strong><span style={{ color: "red", fontSize: "20px" }}>
+              <strong><span style={{ color: "#700812", fontSize: "20px" }}>
                 Coaching de preparación de entrevista laboral. 3 horas.</span></strong>
               <p style={{ margin: "0" }}>
-                <span style={{ fontSize: "14px" }}>
+                <strong><span style={{ fontSize: "14px" }}>
                   Tienes {amount.entrevista - 1} puntos de acuerdo al diagnóstico.
-                </span>
+                </span></strong>
               </p>
               <div>
-                <h1 style={{ fontSize: "15px" }}>
+                <p style={{ fontSize: "15px" }}>
                   -Sabrás cómo debes prepararte para una entrevista laboral (antes, durante y después), con la finalidad de aumentar tu confianza frente al reclutador.
-                </h1>
-                <h1 style={{ fontSize: "15px" }}>
+                </p>
+                <p style={{ fontSize: "15px" }}>
                   -Te daré tips de qué elementos debes cuidar en todo momento: tus lenguajes y tu imagen personal.
-                </h1 >
-                <h1 style={{ fontSize: "15px" }}>
+                </p >
+                <p style={{ fontSize: "15px" }}>
                   -Antes de nuestra sesión, responderás por escrito las 50 preguntas más comunes en una entrevista y elegirás las 10 que te cuesten más trabajo para enfocarnos en ellas.
-                </h1 >
-                <h1 style={{ fontSize: "15px" }}>
+                </p >
+                <p style={{ fontSize: "15px" }}>
                   -Aprenderás cómo contestar de manera adecuada para venderte mejor e incrementar tus posibilidades de ser contratado (a).
-                </h1 >
-                <h1 style={{ fontSize: "15px" }}>
+                </p >
+                <p style={{ fontSize: "15px" }}>
                   -También realizarás tu pitch para presentarte de manera profesional.
-                </h1 >
-                <h1 style={{ fontSize: "15px" }}>
+                </p >
+                <p style={{ fontSize: "15px" }}>
                   -Despejaré cualquier duda que tengas de tus previas experiencias.
-                </h1 >
+                </p >
               </div >
               <div style={{ marginTop: "20px" }}>
-                <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+                <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
                 ><span>
                     Incluye
                   </span>
                   <span>:</span>
                 </span></strong>
-                <h1 style={{ fontSize: "15px" }}>
+                <p style={{ fontSize: "15px" }}>
                   Sesión de 3 horas. Virtual (Google Meet o Jitsi).
-                </h1 >
-                <h1 style={{ fontSize: "15px" }}>
+                </p >
+                <p style={{ fontSize: "15px" }}>
                   -Formato de autoevaluación de entrevistas.
-                </h1 >
-                <h1 style={{ fontSize: "15px" }}>
+                </p >
+                <p style={{ fontSize: "15px" }}>
                   -Archivo con las 50 preguntas más comunes en una entrevista laboral.
-                </h1 >
+                </p >
               </div >
               <div style={{ marginTop: "20px" }}>
                 <strong>
-                  <span style={{ color: "#336eff", fontSize: "20px" }}>
+                  <span style={{ color: "#0b3062", fontSize: "20px" }}>
                     Valor:
                   </span>
                 </strong >
@@ -305,41 +305,41 @@ export default function ObjetivosPage() {
           amount.entrevista - 1 == 80 ?
             <html>
               <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-                <strong><span style={{ color: "red", fontSize: "20px" }}>
+                <strong><span style={{ color: "#700812", fontSize: "20px" }}>
                   Coaching de simulación de entrevista laboral. 1.5 horas.</span></strong>
                 <p style={{ margin: "0" }}>
-                  <span style={{ fontSize: "14px" }}>
+                <strong><span style={{ fontSize: "14px" }}>
                     Tienes {amount.entrevista - 1} puntos de acuerdo al diagnóstico.
-                  </span>
+                  </span></strong>
                 </p>
                 <div>
-                  <h1 style={{ fontSize: "15px" }}>
+                  <p style={{ fontSize: "15px" }}>
                     -Haremos una simulación de entrevista, por lo tanto, debes estar vestido(a) como si fuera una entrevista laboral real (aún sea virtual).
-                  </h1>
-                  <h1 style={{ fontSize: "15px" }}>
+                  </p>
+                  <p style={{ fontSize: "15px" }}>
                     -Te daré retroalimentación de: tus respuestas, tu imagen (de acuerdo a tu perfil), lenguajes (verbal, no verbal y paraverbal), tu pitch de presentación, errores, etc.
-                  </h1 >
-                  <h1 style={{ fontSize: "15px" }}>
+                  </p >
+                  <p style={{ fontSize: "15px" }}>
                     -Puede estar enfocada a una vacante, empresa y/o persona de tu interés.
-                  </h1 >
+                  </p >
                 </div >
                 <div style={{ marginTop: "20px" }}>
-                  <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+                  <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
                   ><span>
                       Incluye
                     </span>
                     <span>:</span>
                   </span></strong>
-                  <h1 style={{ fontSize: "15px" }}>
+                  <p style={{ fontSize: "15px" }}>
                     -Sesión de hora y media Virtual (Google Meet o Jitsi) : 45 minutos de simulación y 45 minutos de retroalimentación.
-                  </h1 >
-                  <h1 style={{ fontSize: "15px" }}>
+                  </p >
+                  <p style={{ fontSize: "15px" }}>
                     -Prepararé una entrevista semiestructurada laboral por valores y competencias enfocada a la vacante y/o empresa para llevar a cabo la simulación contigo en el idioma que elijas (1. 5 horas).
-                  </h1 >
+                  </p >
                 </div >
                 <div style={{ marginTop: "20px" }}>
                   <strong>
-                    <span style={{ color: "#336eff", fontSize: "20px" }}>
+                    <span style={{ color: "#0b3062", fontSize: "20px" }}>
                       Valor:
                     </span>
                   </strong >
@@ -356,7 +356,7 @@ export default function ObjetivosPage() {
             :
             <html>
               <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1", }}>
-                <h1 style={{ color: "red", fontSize: "20px" }}>
+                <h1 style={{ color: "#700812", fontSize: "20px" }}>
                   Coaching de simulación de entrevista laboral.
                 </h1>
                 <h1 style={{ fontSize: "17px" }}>
@@ -369,60 +369,60 @@ export default function ObjetivosPage() {
       amount.empleo - 1 <= 80 ?
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-            <strong><span style={{ color: "red", fontSize: "20px" }}>
+            <strong><span style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de búsqueda de empleo. 3 horas.
             </span></strong>
             <p style={{ margin: "0" }}>
-              <span style={{ fontSize: "14px" }}>
+              <strong><span style={{ fontSize: "14px" }}>
                 Tienes {amount.empleo - 1} puntos de acuerdo al diagnóstico.
-              </span>
+              </span></strong>
             </p>
             <div>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Definirás tu empleo ideal actual objetivo (12 variables) y subjetivo para que enfoques tu búsqueda y puedas evaluar cualquier vacante antes de postularte.
-              </h1>
-              <h1 style={{ fontSize: "15px" }}>
+              </p>
+              <p style={{ fontSize: "15px" }}>
                 -Conocerás la efectividad de las fuentes de empleo.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Llevarás a cabo un plan CON 14 RETOS DIARIOS para poder conseguir el empleo que quieres en el menor tiempo posible aprovechando tu red de contactos.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Realizarás un FODA personal con el que descubrirás tus talentos y fortalezas para que los puedas vender en tu C.V. y entrevistas.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
-              <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+              <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
               ><span>
                   Incluye
                 </span>
                 <span>:</span>
               </span></strong>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de tres horas virtuales (Google Meet o Jitsi).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Plan de trabajo con 14 retos diarios con retroalimentación.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Seguimiento durante el tiempo que dure el coaching por WA y correo.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de 1 hora para aterrizar el plan de búsqueda al finalizar los retos.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de 1 hora para revisar avances (uno y dos meses después).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Archivo de empresas y contactos.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Archivo de talentos de Gallup.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
               <strong>
-                <span style={{ color: "#336eff", fontSize: "20px" }}>
+                <span style={{ color: "#0b3062", fontSize: "20px" }}>
                   Valor:
                 </span>
               </strong >
@@ -435,7 +435,7 @@ export default function ObjetivosPage() {
         :
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1", }}>
-            <h1 style={{ color: "red", fontSize: "20px" }}>
+            <h1 style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de búsqueda de empleo.
             </h1>
             <h1 style={{ fontSize: "17px" }}>
@@ -449,45 +449,45 @@ export default function ObjetivosPage() {
       amount.linkedin - 1 <= 80 ?
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-            <strong><span style={{ color: "red", fontSize: "20px" }}>
+            <strong><span style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de uso de Linkedin para buscar trabajo. 1.5 horas.
             </span></strong>
             <p style={{ margin: "0" }}>
-              <span style={{ fontSize: "14px" }}>
+            <strong><span style={{ fontSize: "14px" }}>
                 Tienes {amount.linkedin - 1} puntos de acuerdo al diagnóstico.
-              </span>
+              </span></strong>
             </p>
             <div>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Este servicio es para que destaques tu perfil y lo hagas más visible tanto para el buscador interno de Linkedin como para los reclutadores.
-              </h1>
-              <h1 style={{ fontSize: "15px" }}>
+              </p>
+              <p style={{ fontSize: "15px" }}>
                 -Revisaremos tu perfil de Linkedin y te iré indicando cómo mejorarlo.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Te daré tips para aprovechar al máximo tu red de contactos en Linkedin y cómo usarlo para buscar tu empleo ideal actual.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
-              <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+              <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
               ><span>
                   Incluye
                 </span>
                 <span>:</span>
               </span></strong>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de hora y media. Virtual (Google Meet o Jitsi).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Formato de autoevaluación de perfil.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Dos revisiones posteriores y retroalimentación.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
               <strong>
-                <span style={{ color: "#336eff", fontSize: "20px" }}>
+                <span style={{ color: "#0b3062", fontSize: "20px" }}>
                   Valor:
                 </span>
               </strong >
@@ -500,7 +500,7 @@ export default function ObjetivosPage() {
         :
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1", }}>
-            <h1 style={{ color: "red", fontSize: "20px" }}>
+            <h1 style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de uso de Linkedin para buscar trabajo.
             </h1>
             <h1 style={{ fontSize: "17px" }}>
@@ -514,48 +514,48 @@ export default function ObjetivosPage() {
       amount.objetivos - 1 <= 80 ?
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1" }}>
-            <strong><span style={{ color: "red", fontSize: "20px" }}>
+            <strong><span style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de proyecto de vida y carrera. 3 horas.
             </span></strong>
             <p style={{ margin: "0" }}>
-              <span style={{ fontSize: "14px" }}>
+            <strong><span style={{ fontSize: "14px" }}>
                 Tienes {amount.objetivos - 1} puntos de acuerdo al diagnóstico.
-              </span>
+              </span></strong>
             </p>
             <div>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Esta opción es para hacer un mapa mental que te permita tener una visión global de tu vida.
-              </h1>
-              <h1 style={{ fontSize: "15px" }}>
+              </p>
+              <p style={{ fontSize: "15px" }}>
                 -Podrás definir dónde estás el día de hoy en todas las esferas de tu vida: salud, social, familia y trabajo/vocación.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -La finalidad es que establezcas a dónde quieres llegar y definas objetivos claros que puedas llevar a cabo, a través de un plan de trabajo de 12 días.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Definirás tu misión, visión y valores.
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Harás un Vision Board de tu proyecto de vida.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
-              <strong><span style={{ color: "#336eff", fontSize: "20px" }}
+              <strong><span style={{ color: "#0b3062", fontSize: "20px" }}
               ><span>
                   Incluye
                 </span>
                 <span>:</span>
               </span></strong>
-              <h1 style={{ fontSize: "15px" }}>
+              <p style={{ fontSize: "15px" }}>
                 -Sesión de tres horas. virtual (Google Meet o Jitsi).
-              </h1 >
-              <h1 style={{ fontSize: "15px" }}>
+              </p >
+              <p style={{ fontSize: "15px" }}>
                 -Plan de trabajo de 12 días.
-              </h1 >
+              </p >
             </div >
             <div style={{ marginTop: "20px" }}>
               <strong>
-                <span style={{ color: "#336eff", fontSize: "20px" }}>
+                <span style={{ color: "#0b3062", fontSize: "20px" }}>
                   Valor:
                 </span>
               </strong >
@@ -568,7 +568,7 @@ export default function ObjetivosPage() {
         :
         <html>
           <div style={{ border: "3px solid black", borderRadius: "15px", padding: "10px 10px 10px 10px", background: "#f1f1f1", }}>
-            <h1 style={{ color: "red", fontSize: "20px" }}>
+            <h1 style={{ color: "#700812", fontSize: "20px" }}>
               Coaching de proyecto de vida y carrera.
             </h1>
             <h1 style={{ fontSize: "17px" }}>
@@ -671,9 +671,9 @@ export default function ObjetivosPage() {
                           id="Pregunta1A"
                           name="Pregunta1"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta1 === "si" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta1 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -691,9 +691,9 @@ export default function ObjetivosPage() {
                           id="pregunta1B"
                           name="Pregunta1"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta1 === "no" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta1 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -704,7 +704,7 @@ export default function ObjetivosPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta1 === "no" && <p className="text-blue-800">
+                    {results.Pregunta1 === "No." && <p className="text-blue-800">
                       Si no tienes un equilibrio en tu vida, le estás dedicando demasiado tiempo a tu trabajo y no tienes tiempo para tu salud, estar contigo mismo (a), tu familia, tus amigos, tus actividades recreativas, etc. Puede ser  momento para darte una pausa, reflexionar sobre lo que estás haciendo y lo que quieres hacer.
                     </p>}
                   </div>
@@ -727,9 +727,9 @@ export default function ObjetivosPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta2 === "si" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta2 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -747,9 +747,9 @@ export default function ObjetivosPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta2 === "no" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta2 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -761,7 +761,7 @@ export default function ObjetivosPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta2 === "no" && <p className="text-blue-800">
+                    {results.Pregunta2 === "No." && <p className="text-blue-800">
                       Si no sabes hacia dónde vas, entonces ¿cómo sabrás si ya llegaste o cuánto te falta? Es importante que definas  tu crecimiento profesional o laboral tan lejos como lo quieras llevar. Esta es una pregunta de entrevista ¿cómo te ves en cinco, 10 o 15 años? Deberías tener por lo menos una idea de qué contestar.
                     </p>}
                   </div>
@@ -783,9 +783,9 @@ export default function ObjetivosPage() {
                           id="Pregunta3A"
                           name="Pregunta3"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta3 === "si" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta3 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -803,9 +803,9 @@ export default function ObjetivosPage() {
                           id="Pregunta3B"
                           name="Pregunta3"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta3 === "no" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta3 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -817,7 +817,7 @@ export default function ObjetivosPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta3 === "no" && <p className="text-blue-800">
+                    {results.Pregunta3 === "No." && <p className="text-blue-800">
                       Si no llevas a cabo tu vocación personal no solamente te sentirás vacío en algún punto de tu vida sino que te irá  generando cada vez  mayor  irritabilidad y frustración quedarte donde estás. Si ya sabes lo que no quieres pero no sabes qué sí quieres, te puedo ayudar con un Coaching de Descubrimiento Vocacional.
                     </p>}
                   </div>
@@ -839,9 +839,9 @@ export default function ObjetivosPage() {
                           id="Pregunta4A"
                           name="Pregunta4"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta4 === "si" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta4 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -859,9 +859,9 @@ export default function ObjetivosPage() {
                           id="Pregunta4B"
                           name="Pregunta4"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta4 === "no" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta4 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -873,7 +873,7 @@ export default function ObjetivosPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta4 === "no" && <p className="text-blue-800">
+                    {results.Pregunta4 === "No." && <p className="text-blue-800">
                       Tenemos  claros los objetivos organizacionales y los de nuestra área de trabajo pero pocas veces nos planteamos objetivos personales. Eso es parte de lo que hacemos en este coaching, primero evalúas cómo estás en cada esfera y luego a qué le darás prioridad estableciendo una meta.
                     </p>}
                   </div>
@@ -895,9 +895,9 @@ export default function ObjetivosPage() {
                           id="Pregunta5A"
                           name="Pregunta5"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta5 === "si" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta5 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -915,9 +915,9 @@ export default function ObjetivosPage() {
                           id="Pregunta5B"
                           name="Pregunta5"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.objetivos.results.Pregunta5 === "no" ? true : ""}
+                          defaultChecked={storage?.objetivos.results.Pregunta5 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -928,7 +928,7 @@ export default function ObjetivosPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta5 === "no" && <p className="text-blue-800">
+                    {results.Pregunta5 === "No." && <p className="text-blue-800">
                       Definirás tu objetivo personal laboral, ya sea crecer dentro de tu organización,  conseguir un nuevo empleo, cambiarte de área, de sector, enfocarte a tu vocación, el cumplimiento de ciertos KPI´s, mejorar  tu desempeño como jefe, compañero, socio, proveedor, etc.
                     </p>}
                   </div>

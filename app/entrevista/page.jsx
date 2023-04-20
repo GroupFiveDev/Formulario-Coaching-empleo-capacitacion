@@ -128,9 +128,9 @@ export default function EntrevistaPage() {
                           id="Pregunta1A"
                           name="Pregunta1"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta1 === "si" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta1 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -148,9 +148,9 @@ export default function EntrevistaPage() {
                           id="pregunta1B"
                           name="Pregunta1"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta1 === "no" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta1 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -161,7 +161,7 @@ export default function EntrevistaPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta1 === "no" && <p className="text-blue-800">
+                    {results.Pregunta1 === "No." && <p className="text-blue-800">
                       Si no sabes qué hacer en alguno de estos tiempos,  en el coaching  de Preparación de entrevista laboral te explico 45 actividades  específicas que debes de llevar a cabo antes, durante y después;  tal vez, no estés llevando a cabo varias de ellas.
                     </p>}
                   </div>
@@ -184,9 +184,9 @@ export default function EntrevistaPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta2 === "si" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta2 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -204,9 +204,9 @@ export default function EntrevistaPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta2 === "no" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta2 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -218,7 +218,7 @@ export default function EntrevistaPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta2 === "no" && <p className="text-blue-800">
+                    {results.Pregunta2 === "No." && <p className="text-blue-800">
                       Es posible que estés teniendo errores en tus lenguajes, contestaste de manera inadecuada,   te  faltó venderte como el /la  mejor candidato (a) posible o alguna otra razón que no te estás percatando. Podemos saberlo a través de una simulación de entrevista.
                     </p>}
                   </div>
@@ -240,9 +240,9 @@ export default function EntrevistaPage() {
                           id="Pregunta3A"
                           name="Pregunta3"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta3 === "si" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta3 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -260,9 +260,9 @@ export default function EntrevistaPage() {
                           id="Pregunta3B"
                           name="Pregunta3"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta3 === "no" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta3 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -274,7 +274,7 @@ export default function EntrevistaPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta3 === "no" && <p className="text-blue-800">
+                    {results.Pregunta3 === "No." && <p className="text-blue-800">
                       Si no tienes confianza, en el coaching de preparación te compartiré  un archivo con las  50 preguntas más comunes de una entrevista laboral para que las contestes todas, elijas las 10 más complicadas para ti y  trabajaremos con ellas en una parte de la sesión.  Además, te enseñaré a contestar de manera adecuada a cualquier pregunta que te hagan.
                     </p>}
                   </div>
@@ -296,9 +296,9 @@ export default function EntrevistaPage() {
                           id="Pregunta4A"
                           name="Pregunta4"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta4 === "si" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta4 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -316,9 +316,9 @@ export default function EntrevistaPage() {
                           id="Pregunta4B"
                           name="Pregunta4"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta4 === "no" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta4 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -330,7 +330,7 @@ export default function EntrevistaPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta4 === "no" && <p className="text-blue-800">
+                    {results.Pregunta4 === "No." && <p className="text-blue-800">
                       Es importante que después de la entrevista le des seguimiento constante a los procesos en los que estés participando (de manera activa - proactiva) y no te esperes a que te llamen para darte alguna respuesta (eso es reactivo- pasivo).
                     </p>}
                   </div>
@@ -352,9 +352,9 @@ export default function EntrevistaPage() {
                           id="Pregunta5A"
                           name="Pregunta5"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta5 === "si" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta5 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -372,9 +372,9 @@ export default function EntrevistaPage() {
                           id="Pregunta5B"
                           name="Pregunta5"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.entrevista.results.Pregunta5 === "no" ? true : ""}
+                          defaultChecked={storage?.entrevista.results.Pregunta5 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -385,7 +385,7 @@ export default function EntrevistaPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta5 === "no" && <p className="text-blue-800">
+                    {results.Pregunta5 === "No." && <p className="text-blue-800">
                       En la entrevista laboral, no solamente es importante contestar de manera adecuada (lo que dices) sino cómo lo dices (calidad y cualidad de tu voz), los gestos que  haces con tu cara y la postura de tu cuerpo.  Es posible que si no los estás usando de manera consciente entonces estén jugando en tu contra.
                     </p>}
                   </div>
