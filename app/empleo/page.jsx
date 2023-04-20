@@ -127,9 +127,9 @@ export default function EmpleoPage() {
                           id="Pregunta1A"
                           name="Pregunta1"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta1 === "si" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta1 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -147,9 +147,9 @@ export default function EmpleoPage() {
                           id="pregunta1B"
                           name="Pregunta1"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta1 === "no" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta1 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -160,7 +160,7 @@ export default function EmpleoPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta1 === "no" && <p className="text-blue-800">
+                    {results.Pregunta1 === "No." && <p className="text-blue-800">
                       Es importante saber qué es lo que quieres y para ello definimos tu empleo ideal actual objetivo con 12 variables y también de manera subjetiva, estos elementos  te permitirán evaluar las propuestas laborales que se te vayan presentando en tu proceso de búsqueda.
                     </p>}
                   </div>
@@ -182,9 +182,9 @@ export default function EmpleoPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta2 === "si" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta2 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -202,9 +202,9 @@ export default function EmpleoPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta2 === "no" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta2 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -216,7 +216,7 @@ export default function EmpleoPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta2 === "no" && <p className="text-blue-800">
+                    {results.Pregunta2 === "No." && <p className="text-blue-800">
                       Una vez definido tu empleo ideal actual, lo que sigue es ponerte un objetivo claro en tiempo, qué y cómo vas a hacer para conseguirlo con un plan.  En el coaching de búsqueda de empleo te daré un plan de 14 días de preparación para que sepas todo lo que debes de considerar y hacerlo de ahí en adelante hasta ser contratado (a).
                     </p>}
                   </div>
@@ -238,9 +238,9 @@ export default function EmpleoPage() {
                           id="Pregunta3A"
                           name="Pregunta3"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta3 === "si" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta3 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -258,9 +258,9 @@ export default function EmpleoPage() {
                           id="Pregunta3B"
                           name="Pregunta3"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta3 === "no" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta3 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -272,7 +272,7 @@ export default function EmpleoPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta3 === "no" && <p className="text-blue-800">
+                    {results.Pregunta3 === "No." && <p className="text-blue-800">
                       La mejor fuente de  búsqueda de empleo es tu red de contactos pero si no la estás  usando o lo estás haciendo de manera ineficiente, no te dará  los resultados correctos.
                     </p>}
                   </div>
@@ -294,9 +294,9 @@ export default function EmpleoPage() {
                           id="Pregunta4A"
                           name="Pregunta4"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta4 === "si" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta4 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -314,9 +314,9 @@ export default function EmpleoPage() {
                           id="Pregunta4B"
                           name="Pregunta4"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta4 === "no" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta4 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -328,7 +328,7 @@ export default function EmpleoPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta4 === "no" && <p className="text-blue-800">
+                    {results.Pregunta4 === "No." && <p className="text-blue-800">
                       La mayoría de las personas que buscan empleo únicamente consideran darse de alta en bolsas de trabajo y postularse a vacantes con un C.V. general,  sin poderle dar seguimiento y no se enfocan en otras fuentes más efectivas.
                     </p>}
                   </div>
@@ -350,9 +350,9 @@ export default function EmpleoPage() {
                           id="Pregunta5A"
                           name="Pregunta5"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta5 === "si" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta5 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -369,9 +369,9 @@ export default function EmpleoPage() {
                           id="Pregunta5B"
                           name="Pregunta5"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.empleo.results.Pregunta5 === "no" ? true : ""}
+                          defaultChecked={storage?.empleo.results.Pregunta5 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -382,7 +382,7 @@ export default function EmpleoPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta5 === "no" && <p className="text-blue-800">
+                    {results.Pregunta5 === "No." && <p className="text-blue-800">
                       Si no has hecho un estudio FODA, te recomiendo que lo hagas para que  identifiques las fortalezas que venderás en tu C.V. (nunca en lista) y en tu entrevista laboral.
                     </p>}
                   </div>

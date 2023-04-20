@@ -129,9 +129,9 @@ export default function CvPage() {
                           id="Pregunta1A"
                           name="Pregunta1"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta1 === "si" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta1 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -149,9 +149,9 @@ export default function CvPage() {
                           id="pregunta1B"
                           name="Pregunta1"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta1 === "no" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta1 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -162,7 +162,7 @@ export default function CvPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta1 === "no" && <p className="text-blue-800">
+                    {results.Pregunta1 === "No." && <p className="text-blue-800">
                       Si estás mandando tu C.V. y no te están llamando a entrevistas es porque  tal vez no estás utilizando un C.V. específico sino uno general (con toda tu experiencia) y/o no estás poniendo la información que le interesa al reclutador saber de ti.
                     </p>}
                   </div>
@@ -185,9 +185,9 @@ export default function CvPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta2 === "si" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta2 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -205,9 +205,9 @@ export default function CvPage() {
                           id="Pregunta2A"
                           name="Pregunta2"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta2 === "no" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta2 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -219,7 +219,7 @@ export default function CvPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta2 === "no" && <p className="text-blue-800">
+                    {results.Pregunta2 === "No." && <p className="text-blue-800">
                       Si tu C.V. tiene  tres cuartillas o más es demasiado largo para lo que se considera hoy profesional. Si tienes nivel gerencial y/o directivo puede tener máximo dos cuartillas, si no, una sola hoja es más que suficiente para vender lo mejor de ti.
                     </p>}
                   </div>
@@ -241,9 +241,9 @@ export default function CvPage() {
                           id="Pregunta3A"
                           name="Pregunta3"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta3 === "si" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta3 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -261,9 +261,9 @@ export default function CvPage() {
                           id="Pregunta3B"
                           name="Pregunta3"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta3 === "no" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta3 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -275,7 +275,7 @@ export default function CvPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta3 === "no" && <p className="text-blue-800">
+                    {results.Pregunta3 === "No." && <p className="text-blue-800">
                       Si en tu currículum hay funciones o actividades en lugar de logros bien redactados, eso es un error muy común; y si además no contiene  tus mejores fortalezas, no lo estás aprovechando al máximo.
                     </p>}
                   </div>
@@ -297,9 +297,9 @@ export default function CvPage() {
                           id="Pregunta4A"
                           name="Pregunta4"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta4 === "si" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta4 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -317,9 +317,9 @@ export default function CvPage() {
                           id="Pregunta4B"
                           name="Pregunta4"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta4 === "no" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta4 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -331,7 +331,7 @@ export default function CvPage() {
 
                       </div>
                     </div>
-                    {results.Pregunta4 === "no" && <p className="text-blue-800">
+                    {results.Pregunta4 === "No." && <p className="text-blue-800">
                       Si no sabes cómo adaptar tu C.V. a una vacante de tu interés, no estás ni siquiera entrando al proceso de reclutamiento; si lo haces bien y cubres el perfil de la vacante puedes ser considerado (a) en el proceso de selección e inclusive ser parte de la terna final.
                     </p>}
                   </div>
@@ -353,9 +353,9 @@ export default function CvPage() {
                           id="Pregunta5A"
                           name="Pregunta5"
                           type="radio"
-                          value="si"
+                          value="Sí."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta5 === "si" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta5 === "Sí." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -373,9 +373,9 @@ export default function CvPage() {
                           id="Pregunta5B"
                           name="Pregunta5"
                           type="radio"
-                          value="no"
+                          value="No."
                           onChange={handleChange}
-                          defaultChecked={storage?.cv.results.Pregunta5 === "no" ? true : ""}
+                          defaultChecked={storage?.cv.results.Pregunta5 === "No." ? true : ""}
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           required
                         />
@@ -386,7 +386,7 @@ export default function CvPage() {
                         </label>
                       </div>
                     </div>
-                    {results.Pregunta5 === "no" && <p className="text-blue-800">
+                    {results.Pregunta5 === "No." && <p className="text-blue-800">
                       Si copias y pegas el mismo texto en el correo para cualquier persona a la que le mandas tu currículum y si no redactas una carta de presentación INTERESANTE para quien la recibe, es muy factible que ni siquiera estén abriendo tu C.V. que va como archivo adjunto.
                     </p>}
                   </div>
